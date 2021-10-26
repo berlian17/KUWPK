@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PublicController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,10 +14,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/1', function () {
+    return view('example.animate');
+});
+
 Route::get('/', function () {
-    return view('public.homepage');
+    return view('public.aboutus');
 });
 
 Auth::routes();
+
+Route::prefix('public/')->group(function() {
+    Route::get('beranda', [PublicController::class, 'beranda'])->name('public.beranda');
+    Route::get('profileKoperasi', [PublicController::class, 'aboutus'])->name('public.aboutus');
+});
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
