@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{config('app.name')}} | Profile Perusahaan</title>
+    <title>{{config('app.name')}} | Struktur Organisasi</title>
     <link rel="icon" href="{{ asset('assets/logo/KUWPK-logo.png') }}" type="image/x-icon">
 
     <!-- CSS -->
@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="{{ asset('assets/plugins/slick/slick.css') }}">
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/aboutus.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/organisasi.css') }}">
 </head>
 <body id="body">
     <!-- Sebelum Login -->
@@ -181,7 +181,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2>Profile Koperasi</h2>
+                    <h2>Struktur Organisasi</h2>
                 </div>
             </div>
         </div>
@@ -189,80 +189,23 @@
     <!-- End section1 -->
 
     <!-- Start Section2 -->
-    <section class="about-shot-info section-sm s1">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <img class="img-fluid" src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img">
-                </div>
-                <div class="col-md-6 mt-20">
-                    <h2 class="mb-5"><b>Tentang KUWPK</b></h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat voluptate molestias, quaerat quo natus dolor harum voluptatibus modi dicta ducimus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum quae officia earum dolore est quaerat cupiditate voluptatibus id, magni alias veniam voluptate, libero explicabo, distinctio atque!. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, fugit itaque ratione incidunt voluptas. Quaerat quidem dolor, quisquam amet inventore quas adipisci ea sint qui placeat beatae molestias aut, aperiam!</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat voluptate molestias, quaerat quo natus dolor harum voluptatibus modi dicta ducimus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum quae officia earum dolore est quaerat cupiditate voluptatibus id, magni alias veniam voluptate, libero explicabo, distinctio atque!. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, fugit itaque ratione incidunt voluptas. Quaerat quidem dolor, quisquam amet inventore quas adipisci ea sint qui placeat beatae molestias aut, aperiam!</p>
-                </div>
-                <div class="col-md-12 mt-20">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat voluptate molestias, quaerat quo natus dolor harum voluptatibus modi dicta ducimus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum quae officia earum dolore est quaerat cupiditate voluptatibus id, magni alias veniam voluptate, libero explicabo, distinctio atque!. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, fugit itaque ratione incidunt voluptas. Quaerat quidem dolor, quisquam amet inventore quas adipisci ea sint qui placeat beatae molestias aut, aperiam!</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat voluptate molestias, quaerat quo natus dolor harum voluptatibus modi dicta ducimus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum quae officia earum dolore est quaerat cupiditate voluptatibus id, magni alias veniam voluptate, libero explicabo, distinctio atque!. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, fugit itaque ratione incidunt voluptas. Quaerat quidem dolor, quisquam amet inventore quas adipisci ea sint qui placeat beatae molestias aut, aperiam!</p>
-                </div>
-            </div>
-        </div>
+    <section class="th-fullpage hero-area2">
     </section>
     <!-- End section2 -->
 
     <!-- Start Section3 -->
-    <section class="service-2 section bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="title text-center">
-                        <h2><b>Visi</b></h2>
-                        <div class="border"></div>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="title text-center">
-                        <h2><b>Misi</b></h2>
-                        <div class="border"></div>
-                    </div>
-                </div>
-                <div class="col-md-4 text-center">
-                    <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="rounded-circle">   
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </div>
-                <div class="col-md-4 text-center">
-                    <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="rounded-circle">  
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>  
-                </div>
-                <div class="col-md-4 text-center">
-                    <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="rounded-circle">    
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End section3 -->
-
-    <!-- Start Section4 -->
     <section class="portfolio section-sm" id="portfolio">
         <div class="container-fluid">
             <div class="row ">
                 <div class="col-lg-12 mt-5">
                     <!-- section title -->
                     <div class="title text-center">
-                        <h2><b>Galeri Foto</b></h2>
+                        <h2><b>Dokumen Koperasi</b></h2>
                         <div class="border"></div>
                     </div>
                     <!-- /section title -->
-                    <div class="portfolio-filter">
-                        <button type="button" data-filter="all">All</button>
-                        <button type="button" data-filter="photography">Photography</button>
-                        <button type="button" data-filter="ios">IOS App</button>
-                        <button type="button" data-filter="development">Development</button>
-                        <button type="button" data-filter="design">Design</button>
-                    </div>
-                    <div class="row filtr-container">
-                        <div class="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, design">
+                    <div class="row filtr-container text-center">
+                        <div class="col-md-4 col-sm-6 col-xs-6 filtr-item" data-category="mix">
                             <div class="portfolio-block">
                                 <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="img-fluid">   
                                 <div class="caption">
@@ -274,8 +217,9 @@
                                     </h4>
                                 </div>
                             </div>
+                            <h4 class="mt-3">Loren Ipsum</h4>
                         </div>
-                        <div class="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, design, ios">
+                        <div class="col-md-4 col-sm-6 col-xs-6 filtr-item" data-category="mix">
                             <div class="portfolio-block">
                                 <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="img-fluid">   
                                 <div class="caption">
@@ -287,8 +231,9 @@
                                     </h4>
                                 </div>
                             </div>
+                            <h4 class="mt-3">Loren Ipsum</h4>
                         </div>
-                        <div class="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, photography, development">
+                        <div class="col-md-4 col-sm-6 col-xs-6 filtr-item " data-category="mix">
                             <div class="portfolio-block">
                                 <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="img-fluid">   
                                 <div class="caption">
@@ -300,71 +245,7 @@
                                     </h4>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, photography, ios">
-                            <div class="portfolio-block">
-                                <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="img-fluid">   
-                                <div class="caption">
-                                    <a class="search-icon" href="{{ asset('assets/logo/KUWPK-logo.png') }}" data-lightbox="image-1">
-                                        <i class="tf-ion-ios-search-strong"></i>
-                                    </a>
-                                    <h4>
-                                        <a href="">View</a>
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, design">
-                            <div class="portfolio-block">
-                                <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="img-fluid">   
-                                <div class="caption">
-                                    <a class="search-icon" href="{{ asset('assets/logo/KUWPK-logo.png') }}" data-lightbox="image-1">
-                                        <i class="tf-ion-ios-search-strong"></i>
-                                    </a>
-                                    <h4>
-                                        <a href="">View</a>
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, design, development">
-                            <div class="portfolio-block">
-                                <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="img-fluid">   
-                                <div class="caption">
-                                    <a class="search-icon" href="{{ asset('assets/logo/KUWPK-logo.png') }}" data-lightbox="image-1">
-                                        <i class="tf-ion-ios-search-strong"></i>
-                                    </a>
-                                    <h4>
-                                        <a href="">View</a>
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, photography">
-                            <div class="portfolio-block">
-                                <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="img-fluid">   
-                                <div class="caption">
-                                    <a class="search-icon" href="{{ asset('assets/logo/KUWPK-logo.png') }}" data-lightbox="image-1">
-                                        <i class="tf-ion-ios-search-strong"></i>
-                                    </a>
-                                    <h4>
-                                        <a href="">View</a>
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, design, development">
-                            <div class="portfolio-block">
-                                <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="img-fluid">   
-                                <div class="caption">
-                                    <a class="search-icon" href="{{ asset('assets/logo/KUWPK-logo.png') }}" data-lightbox="image-1">
-                                        <i class="tf-ion-ios-search-strong"></i>
-                                    </a>
-                                    <h4>
-                                        <a href="">View</a>
-                                    </h4>
-                                </div>
-                            </div>
+                            <h4 class="mt-3">Loren Ipsum</h4>
                         </div>
                     </div>
                 </div>
@@ -374,7 +255,7 @@
         </div>
         <!-- end container -->
     </section>
-    <!-- End section4 -->
+    <!-- End section3 -->
 
     @include('public.component.footer')
 

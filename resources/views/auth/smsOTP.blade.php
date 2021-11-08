@@ -94,54 +94,33 @@
         </div>
     </header>
 
-    <!-- Start section1 -->
-    <section class="section">
+    <!-- Start Section1 -->
+    <section class="section verify-otp">
         <div class="container">
-            <div class="mt-5">
-                <h2><b>Selamat Datang Kembali</b></h2>
-                <p>Kami membutuhkan verifikasi nomor telepon kamu untuk memberikan semua layanan KUWPK.</p>
+            <div class="text-center">
+                <h2><b>Masukan Kode OTP</b></h2>
             </div>
             <div class="row">
-                <div class="col-md-6">
-                    <img class="img-fluid mb-3" src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img">
-                </div>
                 <div class="col-md-6">
                     <div class="card shadow">
                         <div class="card-body">
                             <div class="contact-form">
-                                <form action="{{ route('post-login1') }}" class="form" method="POST">
+                                <form action="" id="contact-form" class="form" method="POST">
                                     @csrf
                                     <div class="form-group mb-3">
-                                        <label for="Badge" class="form-label"><b>No. Badge</b></label>
-                                        <input type="text" class="form-control rounded" name="badge" placeholder="No. Badge Anda..." id="Badge" value="{{ old('badge') }}">
-                                        @error('badge')
+                                        <label for="OTP" class="form-label"><b>Kode OTP</b></label>
+                                        <input type="text" class="form-control rounded" name="otp" placeholder="Kode OTP..." id="OTP">
+                                        @error('otp')
                                             <span class="invalid-feedback mb-2 mt-0" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror
-                                    </div>
-                                    <div class="form-group mb-3">
-                                        <label for="Telepon" class="form-label"><b>No. Telepon</b></label>
-                                        <div class="d-flex">
-                                            <span class="input-group-text" id="basic-addon1">+62</span>
-                                            <input type="text" class="form-control rounded" name="telepon" placeholder="8********" id="Telepon basic-addon2" value="{{ old('telepon') }}">
-                                        </div>
-                                        @error('telepon')
-                                            <span class="invalid-feedback mb-2 mt-0" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
+                                        <button type="button" class="btn btn-primary mt-3">Kirim ulang OTP</button>
                                     </div>
                                     <div id="cf-submit">
-                                        <button type="submit" id="contact-submit" class="btn btn-transparent rounded">Login</button>
+                                        <input type="submit" id="contact-submit" class="btn btn-transparent rounded" value="Submit">
                                     </div>
                                 </form>
-                                <div class="mt-3 text-center">
-                                    <p>Belum memiliki akun?
-                                        <a href="{{ route('register') }}"><b> Daftar </b>
-                                        </a> segera!
-                                    </p>
-                                </div>
                             </div>
                         </div>
                     </div>

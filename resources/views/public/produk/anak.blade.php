@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{config('app.name')}} | Profile Perusahaan</title>
+    <title>{{config('app.name')}} | Produk Anak</title>
     <link rel="icon" href="{{ asset('assets/logo/KUWPK-logo.png') }}" type="image/x-icon">
 
     <!-- CSS -->
@@ -20,7 +20,9 @@
     <link rel="stylesheet" href="{{ asset('assets/plugins/slick/slick.css') }}">
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/aboutus.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/produk/produk.css') }}">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/77dbe32ca1.js" crossorigin="anonymous"></script>
 </head>
 <body id="body">
     <!-- Sebelum Login -->
@@ -42,7 +44,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('public.beranda') }}">Beranda</a>
                         </li>
-                        <li class="nav-item active dropdown">
+                        <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
                                 Tentang Kami
@@ -62,7 +64,7 @@
                                 <a class="dropdown-item" href="{{ route('public.pinjaman') }}">Pinjaman</a>
                             </div>
                         </li>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item active dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
                                 Produk
@@ -113,7 +115,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('public.beranda') }}">Beranda</a>
                         </li>
-                        <li class="nav-item active dropdown">
+                        <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
                                 Tentang Kami
@@ -133,7 +135,7 @@
                                 <a class="dropdown-item" href="{{ route('public.pinjaman') }}">Pinjaman</a>
                             </div>
                         </li>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item active dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
                                 Produk
@@ -176,12 +178,13 @@
         </div>
     </header> --}}
 
+
     <!-- Start Section1 -->
     <section class="single-page-header">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2>Profile Koperasi</h2>
+                    <h2>Produk Anak</h2>
                 </div>
             </div>
         </div>
@@ -189,181 +192,128 @@
     <!-- End section1 -->
 
     <!-- Start Section2 -->
-    <section class="about-shot-info section-sm s1">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <img class="img-fluid" src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img">
-                </div>
-                <div class="col-md-6 mt-20">
-                    <h2 class="mb-5"><b>Tentang KUWPK</b></h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat voluptate molestias, quaerat quo natus dolor harum voluptatibus modi dicta ducimus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum quae officia earum dolore est quaerat cupiditate voluptatibus id, magni alias veniam voluptate, libero explicabo, distinctio atque!. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, fugit itaque ratione incidunt voluptas. Quaerat quidem dolor, quisquam amet inventore quas adipisci ea sint qui placeat beatae molestias aut, aperiam!</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat voluptate molestias, quaerat quo natus dolor harum voluptatibus modi dicta ducimus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum quae officia earum dolore est quaerat cupiditate voluptatibus id, magni alias veniam voluptate, libero explicabo, distinctio atque!. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, fugit itaque ratione incidunt voluptas. Quaerat quidem dolor, quisquam amet inventore quas adipisci ea sint qui placeat beatae molestias aut, aperiam!</p>
-                </div>
-                <div class="col-md-12 mt-20">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat voluptate molestias, quaerat quo natus dolor harum voluptatibus modi dicta ducimus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum quae officia earum dolore est quaerat cupiditate voluptatibus id, magni alias veniam voluptate, libero explicabo, distinctio atque!. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, fugit itaque ratione incidunt voluptas. Quaerat quidem dolor, quisquam amet inventore quas adipisci ea sint qui placeat beatae molestias aut, aperiam!</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat voluptate molestias, quaerat quo natus dolor harum voluptatibus modi dicta ducimus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum quae officia earum dolore est quaerat cupiditate voluptatibus id, magni alias veniam voluptate, libero explicabo, distinctio atque!. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, fugit itaque ratione incidunt voluptas. Quaerat quidem dolor, quisquam amet inventore quas adipisci ea sint qui placeat beatae molestias aut, aperiam!</p>
-                </div>
-            </div>
-        </div>
+    <section class="th-fullpage hero-area2">
     </section>
     <!-- End section2 -->
 
     <!-- Start Section3 -->
-    <section class="service-2 section bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="title text-center">
-                        <h2><b>Visi</b></h2>
-                        <div class="border"></div>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="title text-center">
-                        <h2><b>Misi</b></h2>
-                        <div class="border"></div>
-                    </div>
-                </div>
-                <div class="col-md-4 text-center">
-                    <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="rounded-circle">   
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </div>
-                <div class="col-md-4 text-center">
-                    <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="rounded-circle">  
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>  
-                </div>
-                <div class="col-md-4 text-center">
-                    <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="rounded-circle">    
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End section3 -->
-
-    <!-- Start Section4 -->
     <section class="portfolio section-sm" id="portfolio">
         <div class="container-fluid">
             <div class="row ">
                 <div class="col-lg-12 mt-5">
-                    <!-- section title -->
-                    <div class="title text-center">
-                        <h2><b>Galeri Foto</b></h2>
-                        <div class="border"></div>
-                    </div>
-                    <!-- /section title -->
+                    <h3><b>Produk</b></h3>
                     <div class="portfolio-filter">
                         <button type="button" data-filter="all">All</button>
-                        <button type="button" data-filter="photography">Photography</button>
-                        <button type="button" data-filter="ios">IOS App</button>
-                        <button type="button" data-filter="development">Development</button>
-                        <button type="button" data-filter="design">Design</button>
+                        <button type="button" data-filter="laki-laki">Laki-Laki</button>
+                        <button type="button" data-filter="perempuan">Perempuan</button>
                     </div>
                     <div class="row filtr-container">
-                        <div class="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, design">
-                            <div class="portfolio-block">
-                                <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="img-fluid">   
-                                <div class="caption">
-                                    <a class="search-icon" href="{{ asset('assets/logo/KUWPK-logo.png') }}" data-lightbox="image-1">
-                                        <i class="tf-ion-ios-search-strong"></i>
-                                    </a>
-                                    <h4>
-                                        <a href="">View</a>
-                                    </h4>
-                                </div>
+                        <div class="col-md-4 col-sm-6 col-xs-6 filtr-item" data-category="mix, laki-laki">
+                            <a href="{{ route('public.produkdetail') }}">
+                                <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="img-fluid pt-5">   
+                            </a>
+                            <div class="row">
+                                <h5 class="leftbox mt-3 pl-2">Loren Ipsum</h5>
+                                <h5 class="rightbox mt-3 pr-2 d-flex flex-row-reverse">Rp 1xx.xxx.xxx</h5>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, design, ios">
-                            <div class="portfolio-block">
-                                <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="img-fluid">   
-                                <div class="caption">
-                                    <a class="search-icon" href="{{ asset('assets/logo/KUWPK-logo.png') }}" data-lightbox="image-1">
-                                        <i class="tf-ion-ios-search-strong"></i>
-                                    </a>
-                                    <h4>
-                                        <a href="">View</a>
-                                    </h4>
-                                </div>
+                        <div class="col-md-4 col-sm-6 col-xs-6 filtr-item" data-category="mix, laki-laki">
+                            <a href="{{ route('public.produkdetail') }}">
+                                <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="img-fluid pt-5">   
+                            </a>
+                            <div class="row">
+                                <h5 class="leftbox mt-3 pl-2">Loren Ipsum</h5>
+                                <h5 class="rightbox mt-3 pr-2 d-flex flex-row-reverse">Rp 1xx.xxx.xxx</h5>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, photography, development">
-                            <div class="portfolio-block">
-                                <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="img-fluid">   
-                                <div class="caption">
-                                    <a class="search-icon" href="{{ asset('assets/logo/KUWPK-logo.png') }}" data-lightbox="image-1">
-                                        <i class="tf-ion-ios-search-strong"></i>
-                                    </a>
-                                    <h4>
-                                        <a href="">View</a>
-                                    </h4>
-                                </div>
+                        <div class="col-md-4 col-sm-6 col-xs-6 filtr-item" data-category="mix, laki-laki">
+                            <a href="{{ route('public.produkdetail') }}">
+                                <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="img-fluid pt-5">   
+                            </a>
+                            <div class="row">
+                                <h5 class="leftbox mt-3 pl-2">Loren Ipsum</h5>
+                                <h5 class="rightbox mt-3 pr-2 d-flex flex-row-reverse">Rp 1xx.xxx.xxx</h5>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, photography, ios">
-                            <div class="portfolio-block">
-                                <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="img-fluid">   
-                                <div class="caption">
-                                    <a class="search-icon" href="{{ asset('assets/logo/KUWPK-logo.png') }}" data-lightbox="image-1">
-                                        <i class="tf-ion-ios-search-strong"></i>
-                                    </a>
-                                    <h4>
-                                        <a href="">View</a>
-                                    </h4>
-                                </div>
+                        <div class="col-md-4 col-sm-6 col-xs-6 filtr-item" data-category="mix, laki-laki">
+                            <a href="{{ route('public.produkdetail') }}">
+                                <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="img-fluid pt-5">   
+                            </a>
+                            <div class="row">
+                                <h5 class="leftbox mt-3 pl-2">Loren Ipsum</h5>
+                                <h5 class="rightbox mt-3 pr-2 d-flex flex-row-reverse">Rp 1xx.xxx.xxx</h5>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, design">
-                            <div class="portfolio-block">
-                                <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="img-fluid">   
-                                <div class="caption">
-                                    <a class="search-icon" href="{{ asset('assets/logo/KUWPK-logo.png') }}" data-lightbox="image-1">
-                                        <i class="tf-ion-ios-search-strong"></i>
-                                    </a>
-                                    <h4>
-                                        <a href="">View</a>
-                                    </h4>
-                                </div>
+                        <div class="col-md-4 col-sm-6 col-xs-6 filtr-item" data-category="mix, laki-laki">
+                            <a href="{{ route('public.produkdetail') }}">
+                                <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="img-fluid pt-5">   
+                            </a>
+                            <div class="row">
+                                <h5 class="leftbox mt-3 pl-2">Loren Ipsum</h5>
+                                <h5 class="rightbox mt-3 pr-2 d-flex flex-row-reverse">Rp 1xx.xxx.xxx</h5>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, design, development">
-                            <div class="portfolio-block">
-                                <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="img-fluid">   
-                                <div class="caption">
-                                    <a class="search-icon" href="{{ asset('assets/logo/KUWPK-logo.png') }}" data-lightbox="image-1">
-                                        <i class="tf-ion-ios-search-strong"></i>
-                                    </a>
-                                    <h4>
-                                        <a href="">View</a>
-                                    </h4>
-                                </div>
+                        <div class="col-md-4 col-sm-6 col-xs-6 filtr-item" data-category="mix, laki-laki">
+                            <a href="{{ route('public.produkdetail') }}">
+                                <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="img-fluid pt-5">   
+                            </a>
+                            <div class="row">
+                                <h5 class="leftbox mt-3 pl-2">Loren Ipsum</h5>
+                                <h5 class="rightbox mt-3 pr-2 d-flex flex-row-reverse">Rp 1xx.xxx.xxx</h5>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, photography">
-                            <div class="portfolio-block">
-                                <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="img-fluid">   
-                                <div class="caption">
-                                    <a class="search-icon" href="{{ asset('assets/logo/KUWPK-logo.png') }}" data-lightbox="image-1">
-                                        <i class="tf-ion-ios-search-strong"></i>
-                                    </a>
-                                    <h4>
-                                        <a href="">View</a>
-                                    </h4>
-                                </div>
+                        <div class="col-md-4 col-sm-6 col-xs-6 filtr-item" data-category="mix, perempuan">
+                            <a href="{{ route('public.produkdetail') }}">
+                                <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="img-fluid pt-5">   
+                            </a>
+                            <div class="row">
+                                <h5 class="leftbox mt-3 pl-2">Loren Ipsum</h5>
+                                <h5 class="rightbox mt-3 pr-2 d-flex flex-row-reverse">Rp 1xx.xxx.xxx</h5>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, design, development">
-                            <div class="portfolio-block">
-                                <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="img-fluid">   
-                                <div class="caption">
-                                    <a class="search-icon" href="{{ asset('assets/logo/KUWPK-logo.png') }}" data-lightbox="image-1">
-                                        <i class="tf-ion-ios-search-strong"></i>
-                                    </a>
-                                    <h4>
-                                        <a href="">View</a>
-                                    </h4>
-                                </div>
+                        <div class="col-md-4 col-sm-6 col-xs-6 filtr-item" data-category="mix, perempuan">
+                            <a href="{{ route('public.produkdetail') }}">
+                                <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="img-fluid pt-5">   
+                            </a>
+                            <div class="row">
+                                <h5 class="leftbox mt-3 pl-2">Loren Ipsum</h5>
+                                <h5 class="rightbox mt-3 pr-2 d-flex flex-row-reverse">Rp 1xx.xxx.xxx</h5>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-6 filtr-item" data-category="mix, perempuan">
+                            <a href="{{ route('public.produkdetail') }}">
+                                <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="img-fluid pt-5">   
+                            </a>
+                            <div class="row">
+                                <h5 class="leftbox mt-3 pl-2">Loren Ipsum</h5>
+                                <h5 class="rightbox mt-3 pr-2 d-flex flex-row-reverse">Rp 1xx.xxx.xxx</h5>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-6 filtr-item" data-category="mix, perempuan">
+                            <a href="{{ route('public.produkdetail') }}">
+                                <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="img-fluid pt-5">   
+                            </a>
+                            <div class="row">
+                                <h5 class="leftbox mt-3 pl-2">Loren Ipsum</h5>
+                                <h5 class="rightbox mt-3 pr-2 d-flex flex-row-reverse">Rp 1xx.xxx.xxx</h5>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-6 filtr-item" data-category="mix, perempuan">
+                            <a href="{{ route('public.produkdetail') }}">
+                                <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="img-fluid pt-5">   
+                            </a>
+                            <div class="row">
+                                <h5 class="leftbox mt-3 pl-2">Loren Ipsum</h5>
+                                <h5 class="rightbox mt-3 pr-2 d-flex flex-row-reverse">Rp 1xx.xxx.xxx</h5>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-6 filtr-item" data-category="mix, perempuan">
+                            <a href="{{ route('public.produkdetail') }}">
+                                <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="img-fluid pt-5">   
+                            </a>
+                            <div class="row">
+                                <h5 class="leftbox mt-3 pl-2">Loren Ipsum</h5>
+                                <h5 class="rightbox mt-3 pr-2 d-flex flex-row-reverse">Rp 1xx.xxx.xxx</h5>
                             </div>
                         </div>
                     </div>
@@ -374,7 +324,33 @@
         </div>
         <!-- end container -->
     </section>
-    <!-- End section4 -->
+    <!-- End section3 -->
+
+    <!-- FAB -->
+    <div class="fab-container">
+		<div class="fab fab-main">
+			<i class="fas fa-shopping-bag"></i>
+		</div>
+
+		<ul class="fab-options">
+            <a href="{{ route('public.keranjang') }}">
+                <li>
+                    <span class="fab-label">Keranjang</span>
+                    <div class="fab-icon-holder">
+                        <i class="fas fa-cart-arrow-down"></i>
+                    </div>
+                </li>
+            </a>
+			<a href="{{ route('public.transaksi') }}">
+                <li>
+                    <span class="fab-label">Transaksi</span>
+                    <div class="fab-icon-holder">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                </li>
+            </a>
+		</ul>
+	</div>
 
     @include('public.component.footer')
 

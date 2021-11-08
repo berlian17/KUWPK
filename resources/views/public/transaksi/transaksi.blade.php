@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{config('app.name')}} | Profile Perusahaan</title>
+    <title>{{config('app.name')}} | Transaksi</title>
     <link rel="icon" href="{{ asset('assets/logo/KUWPK-logo.png') }}" type="image/x-icon">
 
     <!-- CSS -->
@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="{{ asset('assets/plugins/slick/slick.css') }}">
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/aboutus.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/transaksi/transaksi.css') }}">
 </head>
 <body id="body">
     <!-- Sebelum Login -->
@@ -42,7 +42,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('public.beranda') }}">Beranda</a>
                         </li>
-                        <li class="nav-item active dropdown">
+                        <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
                                 Tentang Kami
@@ -62,7 +62,7 @@
                                 <a class="dropdown-item" href="{{ route('public.pinjaman') }}">Pinjaman</a>
                             </div>
                         </li>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item active dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
                                 Produk
@@ -113,7 +113,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('public.beranda') }}">Beranda</a>
                         </li>
-                        <li class="nav-item active dropdown">
+                        <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
                                 Tentang Kami
@@ -133,7 +133,7 @@
                                 <a class="dropdown-item" href="{{ route('public.pinjaman') }}">Pinjaman</a>
                             </div>
                         </li>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item active dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
                                 Produk
@@ -181,7 +181,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2>Profile Koperasi</h2>
+                    <h2>Transaksi</h2>
                 </div>
             </div>
         </div>
@@ -189,192 +189,184 @@
     <!-- End section1 -->
 
     <!-- Start Section2 -->
-    <section class="about-shot-info section-sm s1">
+    <section class="section">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <img class="img-fluid" src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item tab-box">
+                    <a class="nav-link tab-title active" data-toggle="tab" href="#proses">
+                        <h4><b>Proses</b></h4>
+                    <a>
+                </li>
+                <li class="nav-item tab-box">
+                    <a class="nav-link tab-title" data-toggle="tab" href="#selesai">
+                        <h4><b>Selesai</b></h4>
+                    </a>
+                </li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div id="proses" class="container tab-pane p-0 active">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="boxleft1">
+                                    <p><b>16 Juli 2021</b></p>
+                                </div>
+                                <div class="boxright1">
+                                    <p>Bayar sebelum: <b>18 Juli 2021</b></p>
+                                </div>
+                            </div>
+                            <div class="row mt-2 mb-2">
+                                <div class="col-md-3 d-flex align-items-center">
+                                    <img class="img-fluid" src="{{ asset('assets/logo/Bank_Mandiri.png') }}" alt="img">
+                                </div>
+                                <div class="col-md-6 text-center rek">
+                                    <h3>88xxxxxxxxxxxxxxxxx</h3>
+                                </div>
+                                <div class="col-md-3 text-center">
+                                    <p>Total pembayaran</p>
+                                    <h3>Rp 1.415.000</h3>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="boxleft1 status">
+                                    <p>Status: <b>Pembayaran</b></p>
+                                </div>
+                                <div class="boxright1">
+                                    <a class="btn btn-success mt-2" href="{{ route('public.transaksidetailpayment') }}" role="button">Lihat detail</a>
+                                    <a class="btn btn-danger mt-2" href="#" role="button">Batalkan</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>        
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="boxleft1">
+                                    <p><b>17 Juli 2021</b></p>
+                                </div>
+                                <div class="boxright1">
+                                    <p>Bayar sebelum: <b>19 Juli 2021</b></p>
+                                </div>
+                            </div>
+                            <div class="row mt-2 mb-2">
+                                <div class="col-md-3 d-flex align-items-center">
+                                    <img class="img-fluid" src="{{ asset('assets/logo/Bank_Mandiri.png') }}" alt="img">
+                                </div>
+                                <div class="col-md-6 text-center rek">
+                                    <h3>88xxxxxxxxxxxxxxxxx</h3>
+                                </div>
+                                <div class="col-md-3 text-center">
+                                    <p>Total pembayaran</p>
+                                    <h3>Rp 915.000</h3>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="boxleft1 status">
+                                    <p>Status: <b>Pembayaran</b></p>
+                                </div>
+                                <div class="boxright1">
+                                    <a class="btn btn-success mt-2" href="{{ route('public.transaksidetailpayment') }}" role="button">Lihat detail</a>
+                                    <a class="btn btn-danger mt-2" href="#" role="button">Batalkan</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
                 </div>
-                <div class="col-md-6 mt-20">
-                    <h2 class="mb-5"><b>Tentang KUWPK</b></h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat voluptate molestias, quaerat quo natus dolor harum voluptatibus modi dicta ducimus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum quae officia earum dolore est quaerat cupiditate voluptatibus id, magni alias veniam voluptate, libero explicabo, distinctio atque!. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, fugit itaque ratione incidunt voluptas. Quaerat quidem dolor, quisquam amet inventore quas adipisci ea sint qui placeat beatae molestias aut, aperiam!</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat voluptate molestias, quaerat quo natus dolor harum voluptatibus modi dicta ducimus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum quae officia earum dolore est quaerat cupiditate voluptatibus id, magni alias veniam voluptate, libero explicabo, distinctio atque!. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, fugit itaque ratione incidunt voluptas. Quaerat quidem dolor, quisquam amet inventore quas adipisci ea sint qui placeat beatae molestias aut, aperiam!</p>
-                </div>
-                <div class="col-md-12 mt-20">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat voluptate molestias, quaerat quo natus dolor harum voluptatibus modi dicta ducimus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum quae officia earum dolore est quaerat cupiditate voluptatibus id, magni alias veniam voluptate, libero explicabo, distinctio atque!. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, fugit itaque ratione incidunt voluptas. Quaerat quidem dolor, quisquam amet inventore quas adipisci ea sint qui placeat beatae molestias aut, aperiam!</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat voluptate molestias, quaerat quo natus dolor harum voluptatibus modi dicta ducimus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum quae officia earum dolore est quaerat cupiditate voluptatibus id, magni alias veniam voluptate, libero explicabo, distinctio atque!. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, fugit itaque ratione incidunt voluptas. Quaerat quidem dolor, quisquam amet inventore quas adipisci ea sint qui placeat beatae molestias aut, aperiam!</p>
+                <div id="selesai" class="container tab-pane p-0 fade">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="boxleft1">
+                                    <p><b>14 Juli 2021</b></p>
+                                </div>
+                                <div class="boxright1">
+                                </div>
+                            </div>
+                            <div class="row mt-2 mb-2">
+                                <div class="col-md-8">
+                                    <p>No. invoice</p>
+                                    <h3>xxx/xxx/xxxxxxxx</h3>
+                                </div>
+                                <div class="col-md-4 text-center">
+                                    <p>Total pembayaran</p>
+                                    <h3>Rp 915.000</h3>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="boxleft1 status">
+                                    <p>Status: <b>Selesai</b></p>
+                                </div>
+                                <div class="boxright1">
+                                    <a class="btn btn-success mt-2" href="{{ route('public.transaksidetailpayment') }}" role="button">Lihat detail</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="boxleft1">
+                                    <p><b>15 Juli 2021</b></p>
+                                </div>
+                                <div class="boxright1">
+                                </div>
+                            </div>
+                            <div class="row mt-2 mb-2">
+                                <div class="col-md-8">
+                                    <p>No. invoice</p>
+                                    <h3>xxx/xxx/xxxxxxxx</h3>
+                                </div>
+                                <div class="col-md-4 text-center">
+                                    <p>Total pembayaran</p>
+                                    <h3>Rp 715.000</h3>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="boxleft1 status">
+                                    <p>Status: <b>Selesai</b></p>
+                                </div>
+                                <div class="boxright1">
+                                    <a class="btn btn-success mt-2" href="{{ route('public.transaksidetailpayment') }}" role="button">Lihat detail</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="boxleft1">
+                                    <p><b>16 Juli 2021</b></p>
+                                </div>
+                                <div class="boxright1">
+                                </div>
+                            </div>
+                            <div class="row mt-2 mb-2">
+                                <div class="col-md-8">
+                                    <p>No. invoice</p>
+                                    <h3>xxx/xxx/xxxxxxxx</h3>
+                                </div>
+                                <div class="col-md-4 text-center">
+                                    <p>Total pembayaran</p>
+                                    <h3>Rp 965.000</h3>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="boxleft1 status">
+                                    <p>Status: <b>Selesai</b></p>
+                                </div>
+                                <div class="boxright1">
+                                    <a class="btn btn-success mt-2" href="{{ route('public.transaksidetailpayment') }}" role="button">Lihat detail</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
                 </div>
             </div>
         </div>
     </section>
-    <!-- End section2 -->
-
-    <!-- Start Section3 -->
-    <section class="service-2 section bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="title text-center">
-                        <h2><b>Visi</b></h2>
-                        <div class="border"></div>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="title text-center">
-                        <h2><b>Misi</b></h2>
-                        <div class="border"></div>
-                    </div>
-                </div>
-                <div class="col-md-4 text-center">
-                    <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="rounded-circle">   
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </div>
-                <div class="col-md-4 text-center">
-                    <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="rounded-circle">  
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>  
-                </div>
-                <div class="col-md-4 text-center">
-                    <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="rounded-circle">    
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End section3 -->
-
-    <!-- Start Section4 -->
-    <section class="portfolio section-sm" id="portfolio">
-        <div class="container-fluid">
-            <div class="row ">
-                <div class="col-lg-12 mt-5">
-                    <!-- section title -->
-                    <div class="title text-center">
-                        <h2><b>Galeri Foto</b></h2>
-                        <div class="border"></div>
-                    </div>
-                    <!-- /section title -->
-                    <div class="portfolio-filter">
-                        <button type="button" data-filter="all">All</button>
-                        <button type="button" data-filter="photography">Photography</button>
-                        <button type="button" data-filter="ios">IOS App</button>
-                        <button type="button" data-filter="development">Development</button>
-                        <button type="button" data-filter="design">Design</button>
-                    </div>
-                    <div class="row filtr-container">
-                        <div class="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, design">
-                            <div class="portfolio-block">
-                                <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="img-fluid">   
-                                <div class="caption">
-                                    <a class="search-icon" href="{{ asset('assets/logo/KUWPK-logo.png') }}" data-lightbox="image-1">
-                                        <i class="tf-ion-ios-search-strong"></i>
-                                    </a>
-                                    <h4>
-                                        <a href="">View</a>
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, design, ios">
-                            <div class="portfolio-block">
-                                <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="img-fluid">   
-                                <div class="caption">
-                                    <a class="search-icon" href="{{ asset('assets/logo/KUWPK-logo.png') }}" data-lightbox="image-1">
-                                        <i class="tf-ion-ios-search-strong"></i>
-                                    </a>
-                                    <h4>
-                                        <a href="">View</a>
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, photography, development">
-                            <div class="portfolio-block">
-                                <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="img-fluid">   
-                                <div class="caption">
-                                    <a class="search-icon" href="{{ asset('assets/logo/KUWPK-logo.png') }}" data-lightbox="image-1">
-                                        <i class="tf-ion-ios-search-strong"></i>
-                                    </a>
-                                    <h4>
-                                        <a href="">View</a>
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, photography, ios">
-                            <div class="portfolio-block">
-                                <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="img-fluid">   
-                                <div class="caption">
-                                    <a class="search-icon" href="{{ asset('assets/logo/KUWPK-logo.png') }}" data-lightbox="image-1">
-                                        <i class="tf-ion-ios-search-strong"></i>
-                                    </a>
-                                    <h4>
-                                        <a href="">View</a>
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, design">
-                            <div class="portfolio-block">
-                                <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="img-fluid">   
-                                <div class="caption">
-                                    <a class="search-icon" href="{{ asset('assets/logo/KUWPK-logo.png') }}" data-lightbox="image-1">
-                                        <i class="tf-ion-ios-search-strong"></i>
-                                    </a>
-                                    <h4>
-                                        <a href="">View</a>
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, design, development">
-                            <div class="portfolio-block">
-                                <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="img-fluid">   
-                                <div class="caption">
-                                    <a class="search-icon" href="{{ asset('assets/logo/KUWPK-logo.png') }}" data-lightbox="image-1">
-                                        <i class="tf-ion-ios-search-strong"></i>
-                                    </a>
-                                    <h4>
-                                        <a href="">View</a>
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, photography">
-                            <div class="portfolio-block">
-                                <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="img-fluid">   
-                                <div class="caption">
-                                    <a class="search-icon" href="{{ asset('assets/logo/KUWPK-logo.png') }}" data-lightbox="image-1">
-                                        <i class="tf-ion-ios-search-strong"></i>
-                                    </a>
-                                    <h4>
-                                        <a href="">View</a>
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, design, development">
-                            <div class="portfolio-block">
-                                <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="img-fluid">   
-                                <div class="caption">
-                                    <a class="search-icon" href="{{ asset('assets/logo/KUWPK-logo.png') }}" data-lightbox="image-1">
-                                        <i class="tf-ion-ios-search-strong"></i>
-                                    </a>
-                                    <h4>
-                                        <a href="">View</a>
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /end col-lg-12 -->
-            </div>
-            <!-- end row -->
-        </div>
-        <!-- end container -->
-    </section>
-    <!-- End section4 -->
+    <!-- End Section2 -->
 
     @include('public.component.footer')
 
@@ -397,5 +389,8 @@
     <script src="{{ asset('assets/plugins/smooth-scroll/smooth-scroll.min.js') }}"></script>
     <!-- Custom js -->
     <script src="{{ asset('assets/js/script.js') }}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

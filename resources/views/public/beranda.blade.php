@@ -4,7 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Beranda</title>
+        <title>{{config('app.name')}} | Beranda</title>
+        <link rel="icon" href="{{ asset('assets/logo/KUWPK-logo.png') }}" type="image/x-icon">
 
         <!-- CSS -->
         <!-- Themefisher Icon font -->
@@ -22,13 +23,14 @@
         <link rel="stylesheet" href="{{ asset('assets/css/beranda.css') }}">
     </head>
     <body id="body">
+        <!-- Sebelum Login -->
         <header class="navigation fixed-top">
             <div class="container">
                 <!-- main nav -->
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <!-- logo -->
                     <a class="navbar-brand logo" href="{{ route('public.beranda') }}">
-                        <img class="img-fluid" style="max-width: 50px;" src="{{ asset('assets/logo/KUWPK-logo.jpeg') }}" alt="img">
+                        <img class="img-fluid" style="max-width: 50px;" src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img">
                     </a>
                     <!-- /logo -->
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
@@ -47,7 +49,7 @@
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('public.aboutus') }}">Profile Perusahaan</a>
-                                    <a class="dropdown-item" href="#">Strukture Organisasi</a>
+                                    <a class="dropdown-item" href="{{ route('public.organisasi') }}">Strukture Organisasi</a>
                                 </div>
                             </li>
                             <li class="nav-item dropdown">
@@ -56,8 +58,8 @@
                                     Layanan
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#">Simpanan</a>
-                                    <a class="dropdown-item" href="#">Pinjaman</a>
+                                    <a class="dropdown-item" href="{{ route('public.simpanan') }}">Simpanan</a>
+                                    <a class="dropdown-item" href="{{ route('public.pinjaman') }}">Pinjaman</a>
                                 </div>
                             </li>
                             <li class="nav-item dropdown">
@@ -66,22 +68,23 @@
                                     Produk
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#">Pria</a>
-                                    <a class="dropdown-item" href="#">Wanita</a>
-                                    <a class="dropdown-item" href="#">Anak-anak</a>
+                                    <a class="dropdown-item" href="{{ route('public.produkpria') }}">Pria</a>
+                                    <a class="dropdown-item" href="{{ route('public.produkwanita') }}">Wanita</a>
+                                    <a class="dropdown-item" href="{{ route('public.produkanak') }}">Anak-anak</a>
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Kontak</a>
+                                <a class="nav-link" href="{{ route('public.kontak') }}">Kontak</a>
                             </li>
                         </ul>
-                        <div class="col-md-4 justify-content-center">
+                        <div class="col-md-3 auth">
                             <ul class="navbar-nav ml-auto text-center">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Login</a>
+                                    <a class="nav-link" href="{{ route('login') }}">Login</a>
                                 </li>
+                                <div class="border"></div>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Daftar</a>
+                                    <a class="nav-link" href="{{ route('register') }}">Daftar</a>
                                 </li>
                             </ul>
                         </div>
@@ -90,6 +93,88 @@
                 <!-- /main nav -->
             </div>
         </header>
+
+        <!-- Setelah Login -->
+            {{-- <header class="navigation fixed-top">
+            <div class="container">
+                <!-- main nav -->
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <!-- logo -->
+                    <a class="navbar-brand logo" href="{{ route('public.beranda') }}">
+                        <img class="img-fluid" style="max-width: 50px;" src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img">
+                    </a>
+                    <!-- /logo -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+                        aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navigation">
+                        <ul class="navbar-nav ml-auto text-center">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{{ route('public.beranda') }}">Beranda</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    Tentang Kami
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('public.aboutus') }}">Profile Perusahaan</a>
+                                    <a class="dropdown-item" href="{{ route('public.organisasi') }}">Strukture Organisasi</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    Layanan
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('public.simpanan') }}">Simpanan</a>
+                                    <a class="dropdown-item" href="{{ route('public.pinjaman') }}">Pinjaman</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    Produk
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('public.produkpria') }}">Pria</a>
+                                    <a class="dropdown-item" href="{{ route('public.produkwanita') }}">Wanita</a>
+                                    <a class="dropdown-item" href="{{ route('public.produkanak') }}">Anak-anak</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('public.kontak') }}">Kontak</a>
+                            </li>
+                        </ul>
+                        <div class="col-md-3 auth">
+                            <ul class="navbar-nav ml-auto text-center">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <span class="mr-2 d-none d-lg-inline text-gray-600 small">Admin</span>
+                                        <img class="img-profile rounded-circle"
+                                            src="{{ asset('assets/img/undraw_profile.svg') }}">
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="{{ route('public.profile') }}">Profile</a>
+                                        <a class="dropdown-item" href="{{ route('public.portofolio') }}">Portofolio</a>
+                                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="
+                                            event.preventDefault();
+                                            document.getElementById('formlogout').submit();">
+                                            Logout
+                                        </a>
+                                        <form action="{{ route('logout') }}" id="formlogout" method="POST">@csrf</form>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <!-- /main nav -->
+            </div>
+        </header> --}}
 
         <div class="hero-slider">
             <div class="slider-item th-fullpage hero-area">
@@ -109,10 +194,10 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            <h1 data-duration-in=".3" data-animation-in="bounceOutLeft" data-delay-in=".1">We Combine Design <br> and
+                            <h1 data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".1">We Combine Design <br> and
                                 Creativity
                             </h1>
-                            <p data-duration-in=".3" data-animation-in="bounceOutLeft" data-delay-in=".5">Create just what you need
+                            <p data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".5">Create just what you need
                                 for your Perfect Website. Choose from a wide range
                                 <br> of Elements & simply put them on our Canvas.
                             </p>
@@ -133,11 +218,11 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum quae officia earum dolore est quaerat cupiditate voluptatibus id, magni alias veniam voluptate, libero explicabo, distinctio atque!</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, fugit itaque ratione incidunt voluptas. Quaerat quidem dolor, quisquam amet inventore quas adipisci ea sint qui placeat beatae molestias aut, aperiam!</p>
                         <div class="text-center">
-                            <a data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".8"  class="btn btn-main mb-2 mt-3" href="#">Selengkapnya</a>
+                            <a data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".8"  class="btn btn-main mb-2 mt-3" href="{{ route('public.aboutus') }}">Selengkapnya</a>
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <img class="img-fluid" src="{{ asset('assets/logo/KUWPK-logo.jpeg') }}" alt="img">
+                        <img class="img-fluid" src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img">
                     </div>
                 </div>
             </div>
@@ -168,7 +253,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <img class="img-fluid mb-3" src="{{ asset('assets/logo/KUWPK-logo.jpeg') }}" alt="img">
+                                    <img class="img-fluid mb-3" src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img">
                                 </div>
                             </div>
                         </div>
@@ -184,7 +269,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <img class="img-fluid mb-3" src="{{ asset('assets/logo/KUWPK-logo.jpeg') }}" alt="img">
+                                    <img class="img-fluid mb-3" src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img">
                                 </div>
                             </div>
                         </div>
@@ -207,7 +292,7 @@
                     <!-- /section title -->
                 </div>
                 <!-- row1 -->
-                <div class="row reverse">
+                <div class="row reverse center">
                     <div class="col-md-4">
                         <div class="card p-4 shadow">
                             <h2>Online & Offline</h2>
@@ -222,13 +307,13 @@
                         <div class="line mx-auto pt-5 pb-5 mt-3"></div>
                     </div>
                     <div class="col-md-4 img-position-1">
-                        <img class="img-fluid imgs3" src="{{ asset('assets/logo/KUWPK-logo.jpeg') }}" alt="img">
+                        <img class="img-fluid imgs3" src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img">
                     </div>
                 </div>
                 <!-- row2 -->
-                <div class="row">
+                <div class="row center">
                     <div class="col-md-4 img-position-2">
-                        <img class="img-fluid imgs3" src="{{ asset('assets/logo/KUWPK-logo.jpeg') }}" alt="img">
+                        <img class="img-fluid imgs3" src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img">
                     </div>
                     <div class="col-md-4">
                         <div class="line mx-auto pt-5 pb-5 mb-3"></div>
@@ -245,7 +330,7 @@
                     </div>
                 </div>
                 <!-- row3 -->
-                <div class="row reverse">
+                <div class="row reverse center">
                     <div class="col-md-4">
                         <div class="card p-4 shadow">
                             <h2>Online & Offline</h2>
@@ -260,13 +345,13 @@
                         <div class="line mx-auto pt-5 pb-5 mt-3"></div>
                     </div>
                     <div class="col-md-4 img-position-1">
-                        <img class="img-fluid imgs3" src="{{ asset('assets/logo/KUWPK-logo.jpeg') }}" alt="img">
+                        <img class="img-fluid imgs3" src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img">
                     </div>
                 </div>
                 <!-- row4 -->
-                <div class="row">
+                <div class="row center">
                     <div class="col-md-4 img-position-2">
-                        <img class="img-fluid imgs3" src="{{ asset('assets/logo/KUWPK-logo.jpeg') }}" alt="img">
+                        <img class="img-fluid imgs3" src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img">
                     </div>
                     <div class="col-md-4">
                         <div class="line mx-auto pt-5 pb-5 mb-3"></div>
@@ -316,9 +401,6 @@
 
         <!-- Main jQuery -->
         <script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
-        <!-- Google Map -->
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
-        <script src="{{ asset('assets/plugins/google-map/gmap.js') }}"></script>
         <!-- Form Validation -->
         <script src="{{ asset('assets/plugins/form-validation/jquery.form.js') }}"></script> 
         <script src="{{ asset('assets/plugins/form-validation/jquery.validate.min.js') }}"></script>

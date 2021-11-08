@@ -1,0 +1,67 @@
+.navigation .container .navbar .auth {
+    padding-left: 175px;
+}
+
+.navigation .container .navbar .auth .border {
+    height: 30px;
+    margin: 20px auto 20px;
+    position: relative;
+    width: 40px;
+    background: #92CA5A;
+}
+
+.navigation .container .navbar .auth .dropdown-toggle::after {
+    content: none;
+}
+
+.navigation .container .navbar .auth .img-profile {
+    max-width: 40px;
+}
+
+.section .container .row .card {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.section .container .row .font1 {
+    font-size: large;
+}
+
+.section .container .row .font2 {
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+.section .container .row .box-pinjaman {
+    width: 50%;
+    margin-top: 75px;
+    margin-bottom: 75px;
+}
+
+.section .container .row .box-waktu {
+    width: 50%;
+    margin-top: 75px;
+    margin-bottom: 75px;
+}
+
+.section .container .row .col-md-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 767px) {
+    .navigation .container .navbar .auth {
+        padding-left: 20px;
+    }
+
+    .navigation .container .navbar .auth .border {
+        height: 0px;
+        margin: 0px;
+        position: relative;
+        width: 0px;
+        background: #92CA5A;
+    }
+}

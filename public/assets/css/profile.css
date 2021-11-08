@@ -1,0 +1,25 @@
+.navigation .container .navbar .auth {
+    padding-left: 175px;
+}
+
+.navigation .container .navbar .auth .dropdown-toggle::after {
+    content: none;
+}
+
+.navigation .container .navbar .auth .img-profile {
+    max-width: 40px;
+}
+
+.section .container .row .card .box {
+    padding-left: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+    .navigation .container .navbar .auth {
+        padding-left: 20px;
+    }
+
+    .section .container .row .card .box {
+        padding-left: 0px;
+    }
+}
