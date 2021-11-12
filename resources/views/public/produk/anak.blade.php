@@ -25,79 +25,10 @@
     <script src="https://kit.fontawesome.com/77dbe32ca1.js" crossorigin="anonymous"></script>
 </head>
 <body id="body">
-    <!-- Sebelum Login -->
-    <header class="navigation fixed-top">
-        <div class="container">
-            <!-- main nav -->
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <!-- logo -->
-                <a class="navbar-brand logo" href="{{ route('public.beranda') }}">
-                    <img class="img-fluid" style="max-width: 50px;" src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img">
-                </a>
-                <!-- /logo -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
-                    aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navigation">
-                    <ul class="navbar-nav ml-auto text-center">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('public.beranda') }}">Beranda</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                Tentang Kami
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('public.aboutus') }}">Profile Perusahaan</a>
-                                <a class="dropdown-item" href="{{ route('public.organisasi') }}">Strukture Organisasi</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                Layanan
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('public.simpanan') }}">Simpanan</a>
-                                <a class="dropdown-item" href="{{ route('public.pinjaman') }}">Pinjaman</a>
-                            </div>
-                        </li>
-                        <li class="nav-item active dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                Produk
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('public.produkpria') }}">Pria</a>
-                                <a class="dropdown-item" href="{{ route('public.produkwanita') }}">Wanita</a>
-                                <a class="dropdown-item" href="{{ route('public.produkanak') }}">Anak-anak</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('public.kontak') }}">Kontak</a>
-                        </li>
-                    </ul>
-                    <div class="col-md-3 auth">
-                        <ul class="navbar-nav ml-auto text-center">
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">Login</a>
-                            </li>
-                            <div class="border"></div>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">Daftar</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <!-- /main nav -->
-        </div>
-    </header>
-
+    
     <!-- Setelah Login -->
-    {{-- <header class="navigation fixed-top">
+    @if (auth()->check())
+    <header class="navigation fixed-top">
         <div class="container">
             <!-- main nav -->
             <nav class="navbar navbar-expand-lg navbar-light">
@@ -176,8 +107,79 @@
             </nav>
             <!-- /main nav -->
         </div>
-    </header> --}}
-
+    </header>
+    <!-- Sebelum Login -->
+    @else
+    <header class="navigation fixed-top">
+        <div class="container">
+            <!-- main nav -->
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <!-- logo -->
+                <a class="navbar-brand logo" href="{{ route('public.beranda') }}">
+                    <img class="img-fluid" style="max-width: 50px;" src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img">
+                </a>
+                <!-- /logo -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+                    aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navigation">
+                    <ul class="navbar-nav ml-auto text-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('public.beranda') }}">Beranda</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                Tentang Kami
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('public.aboutus') }}">Profile Perusahaan</a>
+                                <a class="dropdown-item" href="{{ route('public.organisasi') }}">Strukture Organisasi</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                Layanan
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('public.simpanan') }}">Simpanan</a>
+                                <a class="dropdown-item" href="{{ route('public.pinjaman') }}">Pinjaman</a>
+                            </div>
+                        </li>
+                        <li class="nav-item active dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                Produk
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('public.produkpria') }}">Pria</a>
+                                <a class="dropdown-item" href="{{ route('public.produkwanita') }}">Wanita</a>
+                                <a class="dropdown-item" href="{{ route('public.produkanak') }}">Anak-anak</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('public.kontak') }}">Kontak</a>
+                        </li>
+                    </ul>
+                    <div class="col-md-3 auth">
+                        <ul class="navbar-nav ml-auto text-center">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">Login</a>
+                            </li>
+                            <div class="border"></div>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('register') }}">Daftar</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- /main nav -->
+        </div>
+    </header>
+    @endif
 
     <!-- Start Section1 -->
     <section class="single-page-header">

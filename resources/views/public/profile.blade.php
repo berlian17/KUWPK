@@ -132,61 +132,51 @@
                                 <div class="form-row box">
                                     <div class="form-group col-md-12 mb-3">
                                         <label for="Nama" class="form-label"><b>Nama</b></label>
-                                        <input type="text" class="form-control rounded @error('nama') is-invalid @enderror" name="nama" placeholder="Nama lengkap sesuai KTP..." id="Nama" value="">
-                                        @error('nama')
-                                            <span class="invalid-feedback mb-2 mt-0" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
+                                        <input type="text" class="form-control rounded" id="Nama" value="{{ $data1->nama }}" disabled>
                                     </div>
-                                    <div class="form-group col-md-12 mb-3">
+                                    <div class="form-group col-md-6 mb-3">
                                         <label for="Tempat_Lahir" class="form-label"><b>Tempat Lahir</b></label>
-                                        <input type="text" class="form-control rounded @error('tempat_lahir') is-invalid @enderror" name="tempat_lahir" placeholder="Tempat lahir sesuai KTP..." id="Tempat_Lahir" value="{{ old('tempat_lahir') }}">
-                                        @error('tempat_lahir')
-                                            <span class="invalid-feedback mb-2 mt-0" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
+                                        <input type="text" class="form-control rounded" id="Tempat_Lahir" value="{{ $data1->tempat_lahir }}" disabled>
                                     </div>
-                                    <div class="form-group col-md-6 mb-3">
+                                    <div class="form-group col-md-3 mb-3">
                                         <label for="Tanggal_Lahir" class="form-label"><b>Tanggal Lahir</b></label>
-                                        <input type="date" class="form-control rounded @error('tanggal_lahir') is-invalid @enderror" name="tanggal_lahir" id="Tanggal_Lahir" value="{{ old('tanggal_lahir') }}">
-                                        @error('tanggal_lahir')
-                                            <span class="invalid-feedback mb-2 mt-0" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
+                                        <input type="date" class="form-control rounded" id="Tanggal_Lahir" value="{{ $data1->tanggal_lahir }}" disabled>
                                     </div>
-                                    <div class="form-group col-md-6 mb-3">
+                                    <div class="form-group col-md-3 mb-3">
                                         <label for="Jenis_Kelamin" class="form-label"><b>Jenis Kelamin</b></label>
-                                        <select class="form-control rounded @error('jenis_kelamin') is-invalid @enderror" name="jenis_kelamin" id="Jenis_Kelamin" value="{{ old('jenis_kelamin') }}">
-                                            <option>Pilih...</option>
-                                            <option>Laki-laki</option>
-                                            <option>Perempuan</option>
+                                        <select class="form-control rounded" id="Jenis_Kelamin" disabled>
+                                            <option value="laki-laki" {{ ($data1->jenis_kelamin == 'laki-laki') ? "selected" : "" }}>{{ $data1->jenis_kelamin }}</option>
+                                            <option value="perempuan" {{ ($data1->jenis_kelamin == 'perempuan') ? "selected" : "" }}>{{ $data1->jenis_kelamin }}</option>
                                         </select>
-                                        @error('jenis_kelamin')
-                                            <span class="invalid-feedback mb-2 mt-0" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
                                     </div>
-                                    <div class="form-group col-md-6 mb-3">
-                                        <label for="No_KTP" class="form-label"><b>No KTP</b></label>
-                                        <input type="text" class="form-control rounded @error('no_ktp') is-invalid @enderror" name="no_ktp" placeholder="Nomor sesuai KTP Anda..." id="No_KTP" value="{{ old('no_ktp') }}">
-                                        @error('no_ktp')
-                                            <span class="invalid-feedback mb-2 mt-0" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
+                                    <div class="form-group col-md-4 mb-3">
+                                        <label for="KTP" class="form-label"><b>No KTP</b></label>
+                                        <input type="text" class="form-control rounded" id="KTP" value="{{ $data1->ktp }}" disabled>
                                     </div>
-                                    <div class="form-group col-md-6 mb-3">
+                                    <!-- jika ada data rekening -->
+                                    @if ($data1->rek_data)
+                                    <div class="form-group col-md-4 mb-3">
+                                        <label for="Nama_Bank" class="form-label"><b>Nama Bank</b></label>
+                                        <input type="text" class="form-control rounded" id="Nama_Bank" value="{{ $data1->rek_data->nama_bank }}" disabled>
+                                    </div>
+                                    <div class="form-group col-md-4 mb-3">
                                         <label for="No_Rekening" class="form-label"><b>No Rekening</b></label>
-                                        <input type="text" class="form-control rounded @error('no_rekening') is-invalid @enderror" name="no_rekening" placeholder="Nomor Rekening Anda..." id="No_Rekening" value="{{ old('no_rekening') }}">
-                                        @error('no_rekening')
-                                            <span class="invalid-feedback mb-2 mt-0" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
+                                        <input type="text" class="form-control rounded" id="No_Rekening" value="{{ $data1->rek_data->no_rekening }}" disabled>
+                                    </div>
+                                    <!-- jika tidak ada data rekening -->
+                                    @else
+                                    <div class="form-group col-md-4 mb-3">
+                                        <label for="Nama_Bank" class="form-label"><b>Nama Bank</b></label>
+                                        <input type="text" class="form-control rounded" id="Nama_Bank" value="" disabled>
+                                    </div>
+                                    <div class="form-group col-md-4 mb-3">
+                                        <label for="No_Rekening" class="form-label"><b>No Rekening</b></label>
+                                        <input type="text" class="form-control rounded" id="No_Rekening" value="" disabled>
+                                    </div>
+                                    @endif
+                                    <div class="form-group col-md-12 mb-3">
+                                        <label for="Alamat" class="form-label"><b>Alamat Rumah</b></label>
+                                        <textarea class="form-control rounded"  id="Alamat" cols="100" rows="5" disabled>{{ $data1->alamat }}</textarea>
                                     </div>
                                 </div>
                             </div>
@@ -196,80 +186,69 @@
                         <div class="form-row">
                             <div class="form-group col-md-12 mb-3">
                                 <label for="Unit_Kerja" class="form-label"><b>Unit Kerja</b></label>
-                                <input type="text" class="form-control rounded @error('unit_kerja') is-invalid @enderror" name="unit_kerja" placeholder="Unit Kerja Anda..." id="Unit_Kerja" value="{{ old('unit_kerja') }}">
-                                @error('unit_kerja')
-                                    <span class="invalid-feedback mb-2 mt-0" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                                <input type="text" class="form-control rounded" id="Unit_Kerja" value="{{ $data1->employee_data->unit_kerja }}" disabled>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6 mb-3">
-                                <label for="No_Badge" class="form-label"><b>No. Badge</b></label>
-                                <input type="text" class="form-control rounded @error('no_badge') is-invalid @enderror" name="no_badge" placeholder="Nomor Badge Anda..." id="No_Badge" value="{{ old('no_badge') }}">
-                                @error('no_badge')
-                                    <span class="invalid-feedback mb-2 mt-0" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                                <label for="Badge" class="form-label"><b>No. Badge</b></label>
+                                <input type="text" class="form-control rounded" id="Badge" value="{{ $data1->badge }}" disabled>
                             </div>
                             <div class="form-group col-md-6 mb-3">
                                 <label for="Telepon" class="form-label"><b>No. Telepon</b></label>
-                                <input type="text" class="form-control rounded @error('telepon') is-invalid @enderror" name="telepon" placeholder="Nomor telepon aktif..." id="Telepon" value="{{ old('telepon') }}">
-                                @error('telepon')
-                                    <span class="invalid-feedback mb-2 mt-0" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                                <input type="text" class="form-control rounded" id="Telepon" value="{{ $data1->employee_data->telepon }}" disabled>
                             </div>
                         </div>
 
                         <h4 class="mt-5"><b>DATA KELUARGA</b></h4>
+                        <!-- jika ada data keluarga -->
+                        @if ($data1->family_data)
                         <div class="form-row">
                             <div class="form-group col-md-12 mb-3">
                                 <label for="Nama" class="form-label"><b>Nama</b></label>
-                                <input type="text" class="form-control rounded @error('nama') is-invalid @enderror" name="nama" placeholder="Nama..." id="Nama" value="{{ old('nama') }}">
-                                @error('nama')
-                                    <span class="invalid-feedback mb-2 mt-0" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                                <input type="text" class="form-control rounded" id="Nama" value="{{ $data1->family_data->nama }}" disabled>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6 mb-3">
                                 <label for="Tempat_Lahir" class="form-label"><b>Tempat Lahir</b></label>
-                                <input type="text" class="form-control rounded @error('tempat_lahir') is-invalid @enderror" name="tempat_lahir" placeholder="Tempat lahir sesuai KTP..." id="Tempat_Lahir" value="{{ old('tempat_lahir') }}">
-                                @error('tempat_lahir')
-                                    <span class="invalid-feedback mb-2 mt-0" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                                <input type="text" class="form-control rounded" id="Tempat_Lahir" value="{{ $data1->family_data->tempat_lahir }}" disabled>
                             </div>
                             <div class="form-group col-md-3 mb-3">
                                 <label for="Tanggal_Lahir" class="form-label"><b>Tanggal Lahir</b></label>
-                                <input type="date" class="form-control rounded @error('tanggal_lahir') is-invalid @enderror" name="tanggal_lahir" id="Tanggal_Lahir" value="{{ old('tanggal_lahir') }}">
-                                @error('tanggal_lahir')
-                                    <span class="invalid-feedback mb-2 mt-0" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                                <input type="date" class="form-control rounded" id="Tanggal_Lahir" value="{{ $data1->family_data->tanggal_lahir }}" disabled>
                             </div>
                             <div class="form-group col-md-3">
                                 <label for="Jenis_Kelamin" class="form-label"><b>Jenis Kelamin</b></label>
-                                <select class="form-control rounded @error('jenis_kelamin') is-invalid @enderror" name="jenis_kelamin" id="Jenis_Kelamin" value="{{ old('jenis_kelamin') }}">
-                                    <option>Pilih...</option>
-                                    <option>Laki-laki</option>
-                                    <option>Perempuan</option>
+                                <select class="form-control rounded" id="Jenis_Kelamin" disabled>
+                                    <option value="laki-laki" {{ ($data1->family_data->jenis_kelamin == 'laki-laki') ? "selected" : "" }}>{{ $data1->family_data->jenis_kelamin }}</option>
+                                    <option value="perempuan" {{ ($data1->family_data->jenis_kelamin == 'perempuan') ? "selected" : "" }}>{{ $data1->family_data->jenis_kelamin }}</option>
                                 </select>
-                                @error('jenis_kelamin')
-                                    <span class="invalid-feedback mb-2 mt-0" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                            </div>
+                        <!-- jika tidak ada data keluarga -->
+                        @else
+                        <div class="form-row">
+                            <div class="form-group col-md-12 mb-3">
+                                <label for="Nama" class="form-label"><b>Nama</b></label>
+                                <input type="text" class="form-control rounded" id="Nama" value="" disabled>
                             </div>
                         </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6 mb-3">
+                                <label for="Tempat_Lahir" class="form-label"><b>Tempat Lahir</b></label>
+                                <input type="text" class="form-control rounded" id="Tempat_Lahir" value="" disabled>
+                            </div>
+                            <div class="form-group col-md-3 mb-3">
+                                <label for="Tanggal_Lahir" class="form-label"><b>Tanggal Lahir</b></label>
+                                <input type="date" class="form-control rounded" id="Tanggal_Lahir" value="" disabled>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="Jenis_Kelamin" class="form-label"><b>Jenis Kelamin</b></label>
+                                <select class="form-control rounded" id="Jenis_Kelamin" disabled>
+                                </select>
+                            </div>
+                        </div>
+                        @endif
                     </div>
                 </div>
             </div>

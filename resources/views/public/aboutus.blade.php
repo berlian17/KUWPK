@@ -23,79 +23,10 @@
     <link rel="stylesheet" href="{{ asset('assets/css/aboutus.css') }}">
 </head>
 <body id="body">
-    <!-- Sebelum Login -->
-    <header class="navigation fixed-top">
-        <div class="container">
-            <!-- main nav -->
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <!-- logo -->
-                <a class="navbar-brand logo" href="{{ route('public.beranda') }}">
-                    <img class="img-fluid" style="max-width: 50px;" src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img">
-                </a>
-                <!-- /logo -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
-                    aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navigation">
-                    <ul class="navbar-nav ml-auto text-center">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('public.beranda') }}">Beranda</a>
-                        </li>
-                        <li class="nav-item active dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                Tentang Kami
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('public.aboutus') }}">Profile Perusahaan</a>
-                                <a class="dropdown-item" href="{{ route('public.organisasi') }}">Strukture Organisasi</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                Layanan
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('public.simpanan') }}">Simpanan</a>
-                                <a class="dropdown-item" href="{{ route('public.pinjaman') }}">Pinjaman</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                Produk
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('public.produkpria') }}">Pria</a>
-                                <a class="dropdown-item" href="{{ route('public.produkwanita') }}">Wanita</a>
-                                <a class="dropdown-item" href="{{ route('public.produkanak') }}">Anak-anak</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('public.kontak') }}">Kontak</a>
-                        </li>
-                    </ul>
-                    <div class="col-md-3 auth">
-                        <ul class="navbar-nav ml-auto text-center">
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">Login</a>
-                            </li>
-                            <div class="border"></div>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">Daftar</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <!-- /main nav -->
-        </div>
-    </header>
-
+    
     <!-- Setelah Login -->
-    {{-- <header class="navigation fixed-top">
+    @if (auth()->check())
+    <header class="navigation fixed-top">
         <div class="container">
             <!-- main nav -->
             <nav class="navbar navbar-expand-lg navbar-light">
@@ -174,7 +105,79 @@
             </nav>
             <!-- /main nav -->
         </div>
-    </header> --}}
+    </header>
+    <!-- Sebelum Login -->
+    @else
+    <header class="navigation fixed-top">
+        <div class="container">
+            <!-- main nav -->
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <!-- logo -->
+                <a class="navbar-brand logo" href="{{ route('public.beranda') }}">
+                    <img class="img-fluid" style="max-width: 50px;" src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img">
+                </a>
+                <!-- /logo -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+                    aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navigation">
+                    <ul class="navbar-nav ml-auto text-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('public.beranda') }}">Beranda</a>
+                        </li>
+                        <li class="nav-item active dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                Tentang Kami
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('public.aboutus') }}">Profile Perusahaan</a>
+                                <a class="dropdown-item" href="{{ route('public.organisasi') }}">Strukture Organisasi</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                Layanan
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('public.simpanan') }}">Simpanan</a>
+                                <a class="dropdown-item" href="{{ route('public.pinjaman') }}">Pinjaman</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                Produk
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('public.produkpria') }}">Pria</a>
+                                <a class="dropdown-item" href="{{ route('public.produkwanita') }}">Wanita</a>
+                                <a class="dropdown-item" href="{{ route('public.produkanak') }}">Anak-anak</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('public.kontak') }}">Kontak</a>
+                        </li>
+                    </ul>
+                    <div class="col-md-3 auth">
+                        <ul class="navbar-nav ml-auto text-center">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">Login</a>
+                            </li>
+                            <div class="border"></div>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('register') }}">Daftar</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- /main nav -->
+        </div>
+    </header>
+    @endif
 
     <!-- Start Section1 -->
     <section class="single-page-header">
@@ -197,12 +200,9 @@
                 </div>
                 <div class="col-md-6 mt-20">
                     <h2 class="mb-5"><b>Tentang KUWPK</b></h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat voluptate molestias, quaerat quo natus dolor harum voluptatibus modi dicta ducimus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum quae officia earum dolore est quaerat cupiditate voluptatibus id, magni alias veniam voluptate, libero explicabo, distinctio atque!. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, fugit itaque ratione incidunt voluptas. Quaerat quidem dolor, quisquam amet inventore quas adipisci ea sint qui placeat beatae molestias aut, aperiam!</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat voluptate molestias, quaerat quo natus dolor harum voluptatibus modi dicta ducimus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum quae officia earum dolore est quaerat cupiditate voluptatibus id, magni alias veniam voluptate, libero explicabo, distinctio atque!. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, fugit itaque ratione incidunt voluptas. Quaerat quidem dolor, quisquam amet inventore quas adipisci ea sint qui placeat beatae molestias aut, aperiam!</p>
-                </div>
-                <div class="col-md-12 mt-20">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat voluptate molestias, quaerat quo natus dolor harum voluptatibus modi dicta ducimus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum quae officia earum dolore est quaerat cupiditate voluptatibus id, magni alias veniam voluptate, libero explicabo, distinctio atque!. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, fugit itaque ratione incidunt voluptas. Quaerat quidem dolor, quisquam amet inventore quas adipisci ea sint qui placeat beatae molestias aut, aperiam!</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat voluptate molestias, quaerat quo natus dolor harum voluptatibus modi dicta ducimus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum quae officia earum dolore est quaerat cupiditate voluptatibus id, magni alias veniam voluptate, libero explicabo, distinctio atque!. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, fugit itaque ratione incidunt voluptas. Quaerat quidem dolor, quisquam amet inventore quas adipisci ea sint qui placeat beatae molestias aut, aperiam!</p>
+                    <p>KUWPK merupakan salah satu upaya PT. Pupuk Kujang untuk meningkatkan kesejahteraan anggotanya, khususnya di daerah sekitar perusahaan. Pembentukan koperasi ini lebih dikenal dengan nama Koperasi Usaha Warga Pupuk Kujang berdiri sejak tanggal 17 Oktober 1980 dengan nama Koperasi Kesejahteraan Karyawan Kujang (K4).</p>
+                    <p>Kegiatan usaha yang diselenggarakan anggota antara lain adalah layanan simpan pinjam, pembelian barang, unit usaha pertokoan, dan usaha catering yang biasanya menyediakan konsumsi untuk acara perusahaan. Sementara itu untuk kegiatan usaha non anggota adalah usaha jasa foto copy dan pengadaan barang rekanan PT Pupuk Kujang.</p>
+                    <p>KUWPK sempat berganti nama beberapa kali sejak awal keberadaannya. K4 pernah berubah menjadi Koperasi Karyawan Pupuk Kujang (KOPKAR-PK), dan terhitung mulai tanggal 10 Juni 2002, Koperasi Karyawan Pupuk Kujang (KOPKAR) dengan Koperasi Wanita Pupuk Kujang (KOPWAN) bergabung membentuk Koperasi yang baru dengan nama KUWPK dan telah disahkan berdasarkan Akta Pendirian atau Perubahan oleh Dinas Koperasi Pengusaha Kecil dan Menengah Kabupaten Karawang No. 518/016/BH/PLK/VI/2002.</p>
                 </div>
             </div>
         </div>
@@ -217,7 +217,7 @@
                     <div class="title text-center">
                         <h2><b>Visi</b></h2>
                         <div class="border"></div>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <h5>Menjadi koperasi sehat tingkat nasional dan memberikan manfaat sebesar-besarnya untuk anggota.</h5>
                     </div>
                 </div>
                 <div class="col-md-12">
@@ -227,16 +227,16 @@
                     </div>
                 </div>
                 <div class="col-md-4 text-center">
-                    <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="rounded-circle">   
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="rounded-circle mb-4">   
+                    <h5>Melayani sepenuh hati untuk anggota.</h5>
                 </div>
                 <div class="col-md-4 text-center">
-                    <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="rounded-circle">  
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>  
+                    <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="rounded-circle mb-4">  
+                    <h5>Pengelolaan transparan dan professional.</h5>  
                 </div>
                 <div class="col-md-4 text-center">
-                    <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="rounded-circle">    
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <img src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img" class="rounded-circle mb-4">    
+                    <h5>Menjadikan KUWPK, koperasi berbasis digital.</h5>
                 </div>
             </div>
         </div>

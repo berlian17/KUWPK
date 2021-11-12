@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\PublicController;
 use Illuminate\Support\Facades\Route;
@@ -21,6 +23,10 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
+Route::prefix('register/')->group(function() {
+    Route::get('/', [RegisterController::class, 'showRegistrationForm'])->name('register');
+});
+
 Route::prefix('public/')->group(function() {
     Route::get('beranda', [PublicController::class, 'beranda'])->name('public.beranda');
     Route::get('profile-koperasi', [PublicController::class, 'aboutus'])->name('public.aboutus');
@@ -41,9 +47,5 @@ Route::prefix('public/')->group(function() {
     Route::get('transaksi-detail-payment', [ProdukController::class, 'transaksiDetailPayment'])->name('public.transaksidetailpayment');
     Route::get('transaksi-detail', [ProdukController::class, 'transaksiDetail'])->name('public.transaksidetail');
 });
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

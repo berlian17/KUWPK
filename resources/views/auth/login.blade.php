@@ -109,11 +109,11 @@
                     <div class="card shadow">
                         <div class="card-body">
                             <div class="contact-form">
-                                <form action="{{ route('post-login1') }}" class="form" method="POST">
+                                <form action="{{ route('login') }}" class="form" method="POST">
                                     @csrf
                                     <div class="form-group mb-3">
                                         <label for="Badge" class="form-label"><b>No. Badge</b></label>
-                                        <input type="text" class="form-control rounded" name="badge" placeholder="No. Badge Anda..." id="Badge" value="{{ old('badge') }}">
+                                        <input type="text" class="form-control rounded @error('badge') is-invalid @enderror" name="badge" placeholder="No. Badge Anda..." id="Badge" value="{{ old('badge') }}" required>
                                         @error('badge')
                                             <span class="invalid-feedback mb-2 mt-0" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -121,12 +121,9 @@
                                         @enderror
                                     </div>
                                     <div class="form-group mb-3">
-                                        <label for="Telepon" class="form-label"><b>No. Telepon</b></label>
-                                        <div class="d-flex">
-                                            <span class="input-group-text" id="basic-addon1">+62</span>
-                                            <input type="text" class="form-control rounded" name="telepon" placeholder="8********" id="Telepon basic-addon2" value="{{ old('telepon') }}">
-                                        </div>
-                                        @error('telepon')
+                                        <label for="Password" class="form-label"><b>Password</b></label>
+                                        <input type="password" class="form-control rounded @error('password') is-invalid @enderror" name="password" placeholder="Password..." id="Password" value="{{ old('password') }}" required>
+                                        @error('password')
                                             <span class="invalid-feedback mb-2 mt-0" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>

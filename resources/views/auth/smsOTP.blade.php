@@ -108,8 +108,20 @@
                                 <form action="" id="contact-form" class="form" method="POST">
                                     @csrf
                                     <div class="form-group mb-3">
+                                        <label for="Telepon" class="form-label"><b>No. Telepon</b></label>
+                                        <div class="d-flex">
+                                            <span class="input-group-text" id="basic-addon1">+62</span>
+                                            <input type="text" class="form-control rounded @error('password') is-invalid @enderror" name="telepon" placeholder="8********" id="Telepon basic-addon2" value="{{ old('telepon') }}" required>
+                                        </div>
+                                        @error('telepon')
+                                            <span class="invalid-feedback mb-2 mt-0" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                    <div class="form-group mb-3">
                                         <label for="OTP" class="form-label"><b>Kode OTP</b></label>
-                                        <input type="text" class="form-control rounded" name="otp" placeholder="Kode OTP..." id="OTP">
+                                        <input type="text" class="form-control rounded @error('password') is-invalid @enderror" name="otp" placeholder="Kode OTP..." id="OTP">
                                         @error('otp')
                                             <span class="invalid-feedback mb-2 mt-0" role="alert">
                                                 <strong>{{ $message }}</strong>
