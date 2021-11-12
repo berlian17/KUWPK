@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{config('app.name')}} | Login</title>
+    <title>{{config('app.name')}} | Transaksi Detail</title>
     <link rel="icon" href="{{ asset('assets/logo/KUWPK-logo.png') }}" type="image/x-icon">
 
     <!-- CSS -->
@@ -20,10 +20,11 @@
     <link rel="stylesheet" href="{{ asset('assets/plugins/slick/slick.css') }}">
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/auth.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/transaksi/detail(done).css') }}">
 </head>
 <body id="body">
-    <!-- Sebelum Login -->
+
+    <!-- Setelah Login -->
     <header class="navigation fixed-top">
         <div class="container">
             <!-- main nav -->
@@ -62,7 +63,7 @@
                                 <a class="dropdown-item" href="{{ route('public.pinjaman') }}">Pinjaman</a>
                             </div>
                         </li>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item active dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
                                 Produk
@@ -79,12 +80,23 @@
                     </ul>
                     <div class="col-md-3 auth">
                         <ul class="navbar-nav ml-auto text-center">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="{{ route('login') }}">Login</a>
-                            </li>
-                            <div class="border"></div>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">Daftar</a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">Admin</span>
+                                    <img class="img-profile rounded-circle"
+                                        src="{{ asset('assets/img/undraw_profile.svg') }}">
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('public.profile') }}">Profile</a>
+                                    <a class="dropdown-item" href="{{ route('public.portofolio') }}">Portofolio</a>
+                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="
+                                        event.preventDefault();
+                                        document.getElementById('formlogout').submit();">
+                                        Logout
+                                    </a>
+                                    <form action="{{ route('logout') }}" id="formlogout" method="POST">@csrf</form>
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -94,59 +106,77 @@
         </div>
     </header>
 
-    <!-- Start section1 -->
-    <section class="section">
+    <!-- Start Section1 -->
+    <section class="single-page-header">
         <div class="container">
-            <div class="mt-5">
-                <h2><b>Selamat Datang Kembali</b></h2>
-                <p>Kami membutuhkan verifikasi nomor telepon kamu untuk memberikan semua layanan KUWPK.</p>
-            </div>
             <div class="row">
-                <div class="col-md-6">
-                    <img class="img-fluid mb-3" src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img">
-                </div>
-                <div class="col-md-6">
-                    <div class="card shadow">
-                        <div class="card-body">
-                            <div class="contact-form">
-                                <form action="{{ route('login') }}" class="form" method="POST">
-                                    @csrf
-                                    <div class="form-group mb-3">
-                                        <label for="Badge" class="form-label"><b>No. Badge</b></label>
-                                        <input type="text" class="form-control rounded @error('badge') is-invalid @enderror" name="badge" placeholder="No. Badge Anda..." id="Badge" value="{{ old('badge') }}" required>
-                                        @error('badge')
-                                            <span class="invalid-feedback mb-2 mt-0" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
-                                    </div>
-                                    <div class="form-group mb-3">
-                                        <label for="Password" class="form-label"><b>Password</b></label>
-                                        <input type="password" class="form-control rounded @error('password') is-invalid @enderror" name="password" placeholder="Password..." id="Password" value="{{ old('password') }}" required>
-                                        @error('password')
-                                            <span class="invalid-feedback mb-2 mt-0" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
-                                    </div>
-                                    <div id="cf-submit">
-                                        <button type="submit" id="contact-submit" class="btn btn-transparent rounded">Login</button>
-                                    </div>
-                                </form>
-                                <div class="mt-3 text-center">
-                                    <p>Belum memiliki akun?
-                                        <a href="{{ route('register') }}"><b> Daftar </b>
-                                        </a> segera!
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-md-12">
+                    <h2>Transaksi Detail</h2>
                 </div>
             </div>
         </div>
     </section>
     <!-- End section1 -->
+
+    <!-- Start Section2 -->
+    <section class="section-sm">
+        <div class="container">
+            <h2 class="ml-2"><b>KUWPK</b></h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <p><b>No. Invoice: </b>xxx/xxx/xxxxxxxx</p>
+                    <p><b>Tanggal: </b>16 Juli 2021</p>           
+                </div>
+                <div class="col-md-6">
+                    <p><b>Nama Pembeli: </b>Berlian Akbar Rusmana</p>
+                    <p><b>Tujuan Pengiriman: </b>Jalan Raya Bungursari Gang Tirtaraya, Rt.01/Rw.02, Bungursari, Kec. Bungursari, Kabupaten Purwakarta, Jawa Barat 41181</p>           
+                </div>
+            </div>
+            <table class="table">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Nama Produk</th>
+                        <th>Jumlah</th>
+                        <th>Harga Barang</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>Loren Ipsum</b></td>
+                        <td>2</td>
+                        <td>Rp 500.000</td>
+                        <td>Rp 1.000.000</td>
+                    </tr>
+                    <tr>
+                        <td><b>Loren Ipsum</b></td>
+                        <td>1</td>
+                        <td>Rp 400.000</td>
+                        <td>Rp 400.000</td>
+                    </tr>
+                </tbody>
+                <thead class="thead-light">
+                    <tr>
+                        <th colspan="3" class="text-center">Subtotal Harga Produk</th>
+                        <th>Rp 1.400.000</th>
+                    </tr>
+                </thead>
+                <thead class="thead-light">
+                    <tr>
+                        <th colspan="3" class="text-center">Subtotal Biaya Pengiriman</th>
+                        <th>Rp 15.000</th>
+                    </tr>
+                </thead>
+                <thead class="thead-light">
+                    <tr>
+                        <th colspan="3" class="text-center">Total Pembayaran</th>
+                        <th>Rp 1.415.000</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </section>
+    <!-- End Section2 -->
 
     @include('public.component.footer')
 

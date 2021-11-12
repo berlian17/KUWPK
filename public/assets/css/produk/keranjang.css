@@ -1,0 +1,155 @@
+.navigation .container .navbar .auth {
+    padding-left: 175px;
+}
+
+.navigation .container .navbar .auth .border {
+    height: 30px;
+    margin: 20px auto 20px;
+    position: relative;
+    width: 40px;
+    background: #92CA5A;
+}
+
+.navigation .container .navbar .auth .dropdown-toggle::after {
+    content: none;
+}
+
+.navigation .container .navbar .auth .img-profile {
+    max-width: 40px;
+}
+
+.border2 {
+    height: 2px;
+    margin: 0px auto 20px;
+    position: relative;
+    width: 90%;
+    background: #92CA5A;
+}
+
+.section .clear {
+    color: red;
+}
+
+.section .title2 {
+    width: 50%;
+}
+
+.section .price {
+    width: 50%;
+    display: flex;
+    justify-content: end;
+}
+
+.fab-container {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 999;
+	cursor: pointer;
+}
+
+.fab-main {
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	background: #92CA5A;
+
+	box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.fab-icon-holder {
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	background: #92CA5A;
+
+	box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.fab-icon-holder:hover{
+	opacity: 0.9;
+}
+
+.fab-main i {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	height: 100%;
+	font-size: 30px;
+	color: #ffffff;
+}
+
+.fab-icon-holder i {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	height: 100%;
+	font-size: 15px;
+	color: #ffffff;
+}
+
+.fab {
+	width: 70px;
+	height: 70px;
+	background: #92CA5A;
+}
+
+.fab-options {
+	list-style-type: none;
+	margin: 0;
+
+	position: absolute;
+	bottom: 80px;
+	right: 0;
+
+	opacity: 0;
+
+	transition: all 0.3s ease;
+	transform: scale(0);
+	transform-origin: 85% bottom;
+}
+
+.fab:hover + .fab-options, .fab-options:hover {
+	opacity: 1;
+	transform: scale(1);
+}
+
+.fab-options li {
+	display: flex;
+	justify-content: flex-end;
+	padding: 5px;
+}
+
+.fab-label {
+	padding: 2px 5px;
+	align-self: center;
+	user-select: none;
+	white-space: nowrap;
+	border-radius: 3px;
+	font-size: 16px;
+	background: #666666;
+	color: #ffffff;
+	box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+	margin-right: 10px;
+}
+
+@media only screen and (max-width: 767px) {
+	.navigation .container .navbar .auth {
+        padding-left: 20px;
+    }
+
+    .navigation .container .navbar .auth .border {
+        height: 0px;
+        margin: 0px;
+        position: relative;
+        width: 0px;
+        background: #92CA5A;
+    }
+	
+    .section img {
+        width: 0%;
+        height: 0%;
+    }
+}

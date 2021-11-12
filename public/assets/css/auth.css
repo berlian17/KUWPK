@@ -1,0 +1,87 @@
+/*=================================================================
+  Login & Register
+==================================================================*/
+.navigation .container .navbar .auth {
+    padding-left: 175px;
+}
+
+.navigation .container .navbar .auth .border {
+    height: 30px;
+    margin: 20px auto 20px;
+    position: relative;
+    width: 40px;
+    background: #92CA5A;
+}
+
+.section .container .row {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.section .container .row .contact-form {
+    margin-bottom: 0px;
+    padding: 20px;
+}
+
+.section .container .row .contact-form #basic-addon1 {
+    width: 13%;
+}
+
+.section .container .row .contact-form #basic-addon2 {
+    width: 87%;
+}
+
+@media only screen and (max-width: 767px) {
+    .navigation .container .navbar .auth {
+        padding-left: 20px;
+    }
+
+    .navigation .container .navbar .auth .border {
+        height: 0px;
+        margin: 0px;
+        position: relative;
+        width: 0px;
+        background: #92CA5A;
+    }
+    
+    .section .container .row .contact-form {
+        margin-bottom: 0px;
+        padding: 0px;
+        padding-top: 10px;
+    }
+
+    .section .container .row .contact-form #basic-addon1 {
+        width: 20%;
+    }
+    
+    .section .container .row .contact-form #basic-addon2 {
+        width: 80%;
+    }
+}
+
+/*=================================================================
+  sms-otp
+==================================================================*/
+.verify-otp .container {
+    margin-top: 105px;
+    margin-bottom: 105px;
+}
+
+.verify-otp .container .row {
+    display: flex;
+    justify-content: center;
+}
+
+/*=================================================================
+  form-regis
+==================================================================*/
+.section .container .row .contact-form ol {
+    list-style: auto;
+    margin-left: 20px;
+}
+
+.section .container .row .contact-form p {
+    color: black;
+    margin-bottom: 0px;
+}

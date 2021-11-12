@@ -18,9 +18,9 @@ class User extends Authenticatable
      * @var string[]
      */
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+        'nama', 'tempat_lahir', 'tanggal_lahir',
+        'jenis_kelamin', 'ktp', 'password',
+        'alamat', 'email', 'role', 'badge',
     ];
 
     /**
@@ -29,8 +29,8 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password',
-        'remember_token',
+        'password', 'remember_token', 'ktp',
+        'role',
     ];
 
     /**
@@ -41,4 +41,16 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function employee_data() {
+        return $this->hasOne(Employee::class);
+    }
+
+    public function family_data() {
+        return $this->hasOne(Family::class);
+    }
+
+    public function rek_data() {
+        return $this->hasOne(Rekening::class);
+    }
 }

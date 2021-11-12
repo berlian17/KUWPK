@@ -1,0 +1,17 @@
+.navigation .container .navbar .auth {
+    padding-left: 175px;
+}
+
+.navigation .container .navbar .auth .dropdown-toggle::after {
+    content: none;
+}
+
+.navigation .container .navbar .auth .img-profile {
+    max-width: 40px;
+}
+
+@media only screen and (max-width: 767px) {
+    .navigation .container .navbar .auth {
+        padding-left: 20px;
+    }
+}

@@ -1,0 +1,55 @@
+.navigation .container .navbar .auth {
+    padding-left: 175px;
+}
+
+.navigation .container .navbar .auth .border {
+    height: 30px;
+    margin: 20px auto 20px;
+    position: relative;
+    width: 40px;
+    background: #92CA5A;
+}
+
+.navigation .container .navbar .auth .dropdown-toggle::after {
+    content: none;
+}
+
+.navigation .container .navbar .auth .img-profile {
+    max-width: 40px;
+}
+
+.section-sm .container h4 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bolder;
+    color: red;
+}
+
+.section-sm .container .rek {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-sm .container .rek img {
+    max-width: 200px;
+    margin-top: 20px;
+}
+
+.section-sm .container .rek h4 {
+    color: black;
+}
+
+@media only screen and (max-width: 767px) {
+    .navigation .container .navbar .auth {
+        padding-left: 20px;
+    }
+
+    .navigation .container .navbar .auth .border {
+        height: 0px;
+        margin: 0px;
+        position: relative;
+        width: 0px;
+        background: #92CA5A;
+    }
+}
