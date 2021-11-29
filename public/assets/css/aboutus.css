@@ -34,4 +34,12 @@
         width: 0px;
         background: #92CA5A;
     }
+    
+    .about-shot-info .container .row img {
+        margin-bottom: 10px;
+    } 
+
+    .service-2 .container .row h5 {
+        margin-bottom: 40px;
+    }
 }

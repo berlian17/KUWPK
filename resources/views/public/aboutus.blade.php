@@ -57,17 +57,22 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
-                                Layanan
+                                Unit Usaha
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('public.simpanan') }}">Simpanan</a>
-                                <a class="dropdown-item" href="{{ route('public.pinjaman') }}">Pinjaman</a>
+                                <a class="dropdown-item" href="">Minimarket</a>
+                                <a class="dropdown-item" href="">Simpanan Pinjam</a>
+                                <a class="dropdown-item" href="">Distributor Pupuk Ritel</a>
+                                <a class="dropdown-item" href="">Supplier Barang & Jasa</a>
+                                <a class="dropdown-item" href="">Ekspedisi</a>
+                                <a class="dropdown-item" href="">Kontraktor Sipil & Struktur</a>
+                                <a class="dropdown-item" href="">Event Organizer & Catering</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
-                                Produk
+                                Toko
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('public.produkpria') }}">Pria</a>
@@ -139,17 +144,22 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
-                                Layanan
+                                Unit Usaha
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('public.simpanan') }}">Simpanan</a>
-                                <a class="dropdown-item" href="{{ route('public.pinjaman') }}">Pinjaman</a>
+                                <a class="dropdown-item" href="">Minimarket</a>
+                                <a class="dropdown-item" href="">Simpanan Pinjam</a>
+                                <a class="dropdown-item" href="">Distributor Pupuk Ritel</a>
+                                <a class="dropdown-item" href="">Supplier Barang & Jasa</a>
+                                <a class="dropdown-item" href="">Ekspedisi</a>
+                                <a class="dropdown-item" href="">Kontraktor Sipil & Struktur</a>
+                                <a class="dropdown-item" href="">Event Organizer & Catering</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
-                                Produk
+                                Toko
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('public.produkpria') }}">Pria</a>
@@ -163,12 +173,9 @@
                     </ul>
                     <div class="col-md-3 auth">
                         <ul class="navbar-nav ml-auto text-center">
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">Login</a>
-                            </li>
                             <div class="border"></div>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">Daftar</a>
+                                <a class="nav-link" href="{{ route('login') }}">Login</a>
                             </li>
                         </ul>
                     </div>
@@ -192,14 +199,14 @@
     <!-- End section1 -->
 
     <!-- Start Section2 -->
-    <section class="about-shot-info section-sm s1">
+    <section class="about-shot-info section-sm">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
                     <img class="img-fluid" src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img">
                 </div>
-                <div class="col-md-6 mt-20">
-                    <h2 class="mb-5"><b>Tentang KUWPK</b></h2>
+                <div class="col-md-6 mt-20 text-justify">
+                    <h2 class="mb-3"><b>Tentang KUWPK</b></h2>
                     <p>KUWPK merupakan salah satu upaya PT. Pupuk Kujang untuk meningkatkan kesejahteraan anggotanya, khususnya di daerah sekitar perusahaan. Pembentukan koperasi ini lebih dikenal dengan nama Koperasi Usaha Warga Pupuk Kujang berdiri sejak tanggal 17 Oktober 1980 dengan nama Koperasi Kesejahteraan Karyawan Kujang (K4).</p>
                     <p>Kegiatan usaha yang diselenggarakan anggota antara lain adalah layanan simpan pinjam, pembelian barang, unit usaha pertokoan, dan usaha catering yang biasanya menyediakan konsumsi untuk acara perusahaan. Sementara itu untuk kegiatan usaha non anggota adalah usaha jasa foto copy dan pengadaan barang rekanan PT Pupuk Kujang.</p>
                     <p>KUWPK sempat berganti nama beberapa kali sejak awal keberadaannya. K4 pernah berubah menjadi Koperasi Karyawan Pupuk Kujang (KOPKAR-PK), dan terhitung mulai tanggal 10 Juni 2002, Koperasi Karyawan Pupuk Kujang (KOPKAR) dengan Koperasi Wanita Pupuk Kujang (KOPWAN) bergabung membentuk Koperasi yang baru dengan nama KUWPK dan telah disahkan berdasarkan Akta Pendirian atau Perubahan oleh Dinas Koperasi Pengusaha Kecil dan Menengah Kabupaten Karawang No. 518/016/BH/PLK/VI/2002.</p>

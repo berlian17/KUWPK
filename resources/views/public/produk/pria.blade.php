@@ -59,17 +59,22 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
-                                Layanan
+                                Unit Usaha
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('public.simpanan') }}">Simpanan</a>
-                                <a class="dropdown-item" href="{{ route('public.pinjaman') }}">Pinjaman</a>
+                                <a class="dropdown-item" href="">Minimarket</a>
+                                <a class="dropdown-item" href="">Simpanan Pinjam</a>
+                                <a class="dropdown-item" href="">Distributor Pupuk Ritel</a>
+                                <a class="dropdown-item" href="">Supplier Barang & Jasa</a>
+                                <a class="dropdown-item" href="">Ekspedisi</a>
+                                <a class="dropdown-item" href="">Kontraktor Sipil & Struktur</a>
+                                <a class="dropdown-item" href="">Event Organizer & Catering</a>
                             </div>
                         </li>
                         <li class="nav-item active dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
-                                Produk
+                                Toko
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('public.produkpria') }}">Pria</a>
@@ -141,17 +146,22 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
-                                Layanan
+                                Unit Usaha
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('public.simpanan') }}">Simpanan</a>
-                                <a class="dropdown-item" href="{{ route('public.pinjaman') }}">Pinjaman</a>
+                                <a class="dropdown-item" href="">Minimarket</a>
+                                <a class="dropdown-item" href="">Simpanan Pinjam</a>
+                                <a class="dropdown-item" href="">Distributor Pupuk Ritel</a>
+                                <a class="dropdown-item" href="">Supplier Barang & Jasa</a>
+                                <a class="dropdown-item" href="">Ekspedisi</a>
+                                <a class="dropdown-item" href="">Kontraktor Sipil & Struktur</a>
+                                <a class="dropdown-item" href="">Event Organizer & Catering</a>
                             </div>
                         </li>
                         <li class="nav-item active dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
-                                Produk
+                                Toko
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('public.produkpria') }}">Pria</a>
@@ -165,12 +175,9 @@
                     </ul>
                     <div class="col-md-3 auth">
                         <ul class="navbar-nav ml-auto text-center">
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">Login</a>
-                            </li>
                             <div class="border"></div>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">Daftar</a>
+                                <a class="nav-link" href="{{ route('login') }}">Login</a>
                             </li>
                         </ul>
                     </div>
@@ -194,8 +201,41 @@
     <!-- End section1 -->
 
     <!-- Start Section2 -->
-    <section class="th-fullpage hero-area2">
-    </section>
+    <div class="hero-slider">
+        <div class="slider-item th-fullpage hero-area2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">Pinjaman KOMERSIAL</h1>
+                        <p data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5"><b>Mudah & Cepat</b> <br> Proses pengajuan dan pencairan maksimal 3 hari kerja.</p>
+                        <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn btn-main" href="#">Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slider-item th-fullpage hero-area2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1 data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".1">Simpanan Berjangka</h1>
+                        <p data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".5"><b>Mudah & Aman</b> <br> Proses pengajuan dan pencairan dana pada hari yang sama.</p>
+                        <a data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".8"  class="btn btn-main" href="#">Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slider-item th-fullpage hero-area2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">Ayo jadi Anggota</h1>
+                        <p data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5"><b>Berpartisipasi membantu sesama anggota Koperasi</b> <br> dan dapatkan imbal hasil hingga 24%.</p>
+                        <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn btn-main" href="#">Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- End section2 -->
 
      <!-- Start Section3 -->

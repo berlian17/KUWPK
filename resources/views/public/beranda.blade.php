@@ -8,6 +8,13 @@
         <link rel="icon" href="{{ asset('assets/logo/KUWPK-logo.png') }}" type="image/x-icon">
 
         <!-- CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+            integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+            integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer">
         <!-- Themefisher Icon font -->
         <link rel="stylesheet" href="{{ asset('assets/plugins/themefisher-font/style.css') }}">
         <!-- bootstrap.min css -->
@@ -57,17 +64,22 @@
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                                     aria-haspopup="true" aria-expanded="false">
-                                    Layanan
+                                    Unit Usaha
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('public.simpanan') }}">Simpanan</a>
-                                    <a class="dropdown-item" href="{{ route('public.pinjaman') }}">Pinjaman</a>
+                                    <a class="dropdown-item" href="">Minimarket</a>
+                                    <a class="dropdown-item" href="{{ route('public.unitsimpin') }}">Simpanan Pinjam</a>
+                                    <a class="dropdown-item" href="">Distributor Pupuk Ritel</a>
+                                    <a class="dropdown-item" href="">Supplier Barang & Jasa</a>
+                                    <a class="dropdown-item" href="">Ekspedisi</a>
+                                    <a class="dropdown-item" href="">Kontraktor Sipil & Struktur</a>
+                                    <a class="dropdown-item" href="">Event Organizer & Catering</a>
                                 </div>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                                     aria-haspopup="true" aria-expanded="false">
-                                    Produk
+                                    Toko
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('public.produkpria') }}">Pria</a>
@@ -139,17 +151,22 @@
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                                     aria-haspopup="true" aria-expanded="false">
-                                    Layanan
+                                    Unit Usaha
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('public.simpanan') }}">Simpanan</a>
-                                    <a class="dropdown-item" href="{{ route('public.pinjaman') }}">Pinjaman</a>
+                                    <a class="dropdown-item" href="">Minimarket</a>
+                                    <a class="dropdown-item" href="{{ route('public.unitsimpin') }}">Simpanan Pinjam</a>
+                                    <a class="dropdown-item" href="">Distributor Pupuk Ritel</a>
+                                    <a class="dropdown-item" href="">Supplier Barang & Jasa</a>
+                                    <a class="dropdown-item" href="">Ekspedisi</a>
+                                    <a class="dropdown-item" href="">Kontraktor Sipil & Struktur</a>
+                                    <a class="dropdown-item" href="">Event Organizer & Catering</a>
                                 </div>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                                     aria-haspopup="true" aria-expanded="false">
-                                    Produk
+                                    Toko
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('public.produkpria') }}">Pria</a>
@@ -163,12 +180,9 @@
                         </ul>
                         <div class="col-md-3 auth">
                             <ul class="navbar-nav ml-auto text-center">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">Login</a>
-                                </li>
                                 <div class="border"></div>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">Daftar</a>
+                                    <a class="nav-link" href="{{ route('login') }}">Login</a>
                                 </li>
                             </ul>
                         </div>
@@ -220,7 +234,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 mt-20">
-                        <h2 class="mb-5"><b>Tentang KUWPK</b></h2>
+                        <h2 class="mb-4 mt-2"><b>Tentang KUWPK</b></h2>
                         <p>Dalam rangka peningkatkan kesejahteraan anggotanya, KUWPK melaksanakan berbagai kegiatan yang diharapkan bisa memberikan manfaat. Kegiatan ini diselenggarakan untuk anggota karyawan Pupuk Kujang.</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum quae officia earum dolore est quaerat cupiditate voluptatibus id, magni alias veniam voluptate, libero explicabo, distinctio atque!</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, fugit itaque ratione incidunt voluptas. Quaerat quidem dolor, quisquam amet inventore quas adipisci ea sint qui placeat beatae molestias aut, aperiam!</p>
@@ -243,40 +257,58 @@
                     <!-- section title -->
                     <div class="col-md-12">
                         <div class="title text-center">
-                            <h2><b>Layanan Kami</b></h2>
+                            <h2><b>Unit Usaha</b></h2>
                             <p>Kami menyediakan beberapa layanan yang bisa anda pilih sesuai dengan kebutuhan anda.</p>
                             <div class="border"></div>
                         </div>
                     </div>
                     <!-- /section title -->
-                    <div class="col-md-6 col-sm-6 col-xs-12 s2">
-                        <div class="service-item">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <h4>Simpanan</h4>
-                                    <p>Simpanan aman dan mudah sehingga menyimpan dana lebih optimal dan mendapatkan pengembalian atau balas jasa yang menarik.</p>
-                                    <div class="text-center">
-                                        <a data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".8"  class="btn btn-main mb-2 mt-3" href="#">Selengkapnya</a>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <img class="img-fluid mb-3" src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img">
+                    <div class="owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="service-item card">
+                                <img class="card-img-top" src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img">
+                                <div class="card-body">
+                                    <div class="card-title">Loren Ipsum1</div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-12 s2">
-                        <div class="service-item">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <h4>Pinjaman</h4>
-                                    <p>Pengajuan pinjaman yang mudah serta menggunakan sistem pengembalian yang terjangkau dan nyaman khusus anggota KUWPK.</p>
-                                    <div class="text-center">
-                                        <a data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".8"  class="btn btn-main mb-2 mt-3" href="#">Selengkapnya</a>
-                                    </div>
+                        <div class="item">
+                            <div class="service-item card">
+                                <img class="card-img-top" src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img">
+                                <div class="card-body">
+                                    <div class="card-title">Loren Ipsum2</div>
                                 </div>
-                                <div class="col-md-6">
-                                    <img class="img-fluid mb-3" src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="service-item card">
+                                <img class="card-img-top" src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img">
+                                <div class="card-body">
+                                    <div class="card-title">Loren Ipsum3</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="service-item card">
+                                <img class="card-img-top" src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img">
+                                <div class="card-body">
+                                    <div class="card-title">Loren Ipsum4</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="service-item card">
+                                <img class="card-img-top" src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img">
+                                <div class="card-body">
+                                    <div class="card-title">Loren Ipsum5</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="service-item card">
+                                <img class="card-img-top" src="{{ asset('assets/logo/KUWPK-logo.png') }}" alt="img">
+                                <div class="card-body">
+                                    <div class="card-title">Loren Ipsum6</div>
                                 </div>
                             </div>
                         </div>
@@ -390,14 +422,22 @@
                         </div>
                     </div>
                     <!-- /section title -->
-                    <div class="col-md-12">
-                        <div id="clients-slider" class="clients-logo-slider d-flex justify-content-center mb-3">
-                            <img src="{{ asset('assets/logo/Bank_Mandiri.png') }}" alt="img" class="ml-4 mr-4">
-                            <img src="{{ asset('assets/logo/Bank_BJB.png') }}" alt="img" class="ml-4 mr-4">
-                            <img src="{{ asset('assets/logo/Pos_Indonesia.png') }}" alt="img" class="ml-4 mr-4">
-                            <img src="{{ asset('assets/logo/Bank_Syariah_Mandiri.png') }}" alt="img" class="ml-4 mr-4">
-                            <img src="{{ asset('assets/logo/BNI_logo.png') }}" alt="img" class="ml-4 mr-4">
-                        </div>        
+                    <div class="owl-carousel owl-theme mt-4 mb-4">
+                        <div class="item">
+                            <img class="card-img-top" src="{{ asset('assets/logo/Bank_Mandiri.png') }}" alt="img">
+                        </div>
+                        <div class="item">
+                            <img class="card-img-top" src="{{ asset('assets/logo/Bank_BJB.png') }}" alt="img">
+                        </div>
+                        <div class="item">
+                            <img class="card-img-top" src="{{ asset('assets/logo/Pos_Indonesia.png') }}" alt="img">
+                        </div>
+                        <div class="item">
+                            <img class="card-img-top" src="{{ asset('assets/logo/Bank_Syariah_Mandiri.png') }}" alt="img">
+                        </div>
+                        <div class="item">
+                            <img class="card-img-top" src="{{ asset('assets/logo/BNI_logo.png') }}" alt="img">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -425,5 +465,47 @@
         <script src="{{ asset('assets/plugins/smooth-scroll/smooth-scroll.min.js') }}"></script>
         <!-- Custom js -->
         <script src="{{ asset('assets/js/script.js') }}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+            integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+            integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="{{ asset('assets/js/jquery.mousewheel.min.js') }}"></script>
+        <script>
+            $('.owl-carousel').owlCarousel({
+                margin: 20,
+                autoplay: true,
+                autoplayHoverPause: true,
+                loop: true,
+                responsive: {
+                    0: {
+                        items: 2,
+                        dots: true
+                    },
+                    485: {
+                        items: 3,
+                        dots: true
+                    },
+                    780: {
+                        items: 4,
+                        dots: true
+                    },
+                    960: {
+                        items: 5,
+                        dots: true
+                    }
+                }
+            });
+
+            $('.owl-carousel').on('mousewheel', '.owl-stage', function(e) {
+                if(e.deltaY>0) {
+                    $('.owl-carousel').trigger('next.owl');
+                } else {
+                    $('.owl-carousel').trigger('prev.owl');
+                }
+                e.preventDefault();
+            });
+        </script>
     </body>
 </html>

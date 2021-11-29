@@ -57,17 +57,22 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
-                                Layanan
+                                Unit Usaha
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('public.simpanan') }}">Simpanan</a>
-                                <a class="dropdown-item" href="{{ route('public.pinjaman') }}">Pinjaman</a>
+                                <a class="dropdown-item" href="">Minimarket</a>
+                                <a class="dropdown-item" href="">Simpanan Pinjam</a>
+                                <a class="dropdown-item" href="">Distributor Pupuk Ritel</a>
+                                <a class="dropdown-item" href="">Supplier Barang & Jasa</a>
+                                <a class="dropdown-item" href="">Ekspedisi</a>
+                                <a class="dropdown-item" href="">Kontraktor Sipil & Struktur</a>
+                                <a class="dropdown-item" href="">Event Organizer & Catering</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
-                                Produk
+                                Toko
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('public.produkpria') }}">Pria</a>
@@ -139,17 +144,22 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
-                                Layanan
+                                Unit Usaha
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('public.simpanan') }}">Simpanan</a>
-                                <a class="dropdown-item" href="{{ route('public.pinjaman') }}">Pinjaman</a>
+                                <a class="dropdown-item" href="">Minimarket</a>
+                                <a class="dropdown-item" href="">Simpanan Pinjam</a>
+                                <a class="dropdown-item" href="">Distributor Pupuk Ritel</a>
+                                <a class="dropdown-item" href="">Supplier Barang & Jasa</a>
+                                <a class="dropdown-item" href="">Ekspedisi</a>
+                                <a class="dropdown-item" href="">Kontraktor Sipil & Struktur</a>
+                                <a class="dropdown-item" href="">Event Organizer & Catering</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
-                                Produk
+                                Toko
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('public.produkpria') }}">Pria</a>
@@ -163,12 +173,9 @@
                     </ul>
                     <div class="col-md-3 auth">
                         <ul class="navbar-nav ml-auto text-center">
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">Login</a>
-                            </li>
                             <div class="border"></div>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">Daftar</a>
+                                <a class="nav-link" href="{{ route('login') }}">Login</a>
                             </li>
                         </ul>
                     </div>

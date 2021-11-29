@@ -18,7 +18,6 @@ class RouteServiceProvider extends ServiceProvider
      * @var string
      */
     public const LOGIN = '/public/beranda';
-    public const REGIS = '/public/beranda';
 
     /**
      * The controller namespace for the application.

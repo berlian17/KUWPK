@@ -56,17 +56,22 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
-                                Layanan
+                                Unit Usaha
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('public.simpanan') }}">Simpanan</a>
-                                <a class="dropdown-item" href="{{ route('public.pinjaman') }}">Pinjaman</a>
+                                <a class="dropdown-item" href="">Minimarket</a>
+                                <a class="dropdown-item" href="">Simpanan Pinjam</a>
+                                <a class="dropdown-item" href="">Distributor Pupuk Ritel</a>
+                                <a class="dropdown-item" href="">Supplier Barang & Jasa</a>
+                                <a class="dropdown-item" href="">Ekspedisi</a>
+                                <a class="dropdown-item" href="">Kontraktor Sipil & Struktur</a>
+                                <a class="dropdown-item" href="">Event Organizer & Catering</a>
                             </div>
                         </li>
                         <li class="nav-item active dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
-                                Produk
+                                Toko
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('public.produkpria') }}">Pria</a>
@@ -122,7 +127,7 @@
     <section class="section-sm">
         <div class="container">
             <h2 class="ml-2"><b>KUWPK</b></h2>
-            <div class="row">
+            <div class="row text-justify">
                 <div class="col-md-6">
                     <p><b>No. Invoice: </b>xxx/xxx/xxxxxxxx</p>
                     <p><b>Tanggal: </b>16 Juli 2021</p>           

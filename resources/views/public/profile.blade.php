@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/profile.css') }}">
 </head>
 <body id="body">
+
     <!-- Setelah Login -->
     <header class="navigation fixed-top">
         <div class="container">
@@ -55,17 +56,22 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
-                                Layanan
+                                Unit Usaha
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('public.simpanan') }}">Simpanan</a>
-                                <a class="dropdown-item" href="{{ route('public.pinjaman') }}">Pinjaman</a>
+                                <a class="dropdown-item" href="">Minimarket</a>
+                                <a class="dropdown-item" href="">Simpanan Pinjam</a>
+                                <a class="dropdown-item" href="">Distributor Pupuk Ritel</a>
+                                <a class="dropdown-item" href="">Supplier Barang & Jasa</a>
+                                <a class="dropdown-item" href="">Ekspedisi</a>
+                                <a class="dropdown-item" href="">Kontraktor Sipil & Struktur</a>
+                                <a class="dropdown-item" href="">Event Organizer & Catering</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
-                                Produk
+                                Toko
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('public.produkpria') }}">Pria</a>
@@ -118,7 +124,7 @@
     <!-- End section1 -->
 
     <!-- Start Section2 -->
-    <div class="section">
+    <section class="section-sm">
         <div class="container">
             <div class="row">
                 <div class="card col-md-12 shadow">
@@ -253,7 +259,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <!-- End section2 -->
 
     @include('public.component.footer')

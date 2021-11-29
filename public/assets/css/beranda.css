@@ -42,8 +42,8 @@
 }
 
 .number {
-    margin-top: 20px;
-    height: 40px;
+    margin-top: 25px;
+    height: 30px;
 }
 
 .imgs3 {
@@ -57,6 +57,37 @@
 .center {
     display: flex;
     align-items: center;
+}
+
+.card .card-title {
+    text-align: center;
+}
+
+.owl-carousel .owl-stage {
+    display: flex;
+    align-items: center;
+}
+
+.owl-prev {
+    left: -30px;
+}
+
+.owl-next {
+    right: -30px;
+}
+
+.owl-prev, .owl-next {
+    position: absolute;
+    top: 30%;
+}
+
+.owl-prev span, .owl-next span {
+    font-size: 60px;
+    color: #787878;
+}
+
+.owl-theme .owl-nav [class*="owl-"]:hover {
+    background-color: transparent;
 }
 
 @media only screen and (max-width: 767px) {

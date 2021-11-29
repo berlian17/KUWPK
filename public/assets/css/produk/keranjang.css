@@ -152,4 +152,9 @@
         width: 0%;
         height: 0%;
     }
+
+	.section .container .row .col-lg-5 h4 {
+		margin-top: 50px;
+		margin-bottom: 10px;
+	}
 }

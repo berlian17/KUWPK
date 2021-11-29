@@ -30,16 +30,8 @@ class PublicController extends Controller
         return view('public.kontak');
     }
 
-    public function pinjaman() {
-        return view('public.pinjaman.pinjaman');
-    }
-
-    // public function formPinjaman() {
-    //     return view('public.pinjaman.formPinjaman');
-    // }
-
-    public function simpanan() {
-        return view('public.simpanan.simpanan');
+    public function unit_simpin() {
+        return view('public.unit.simpin');
     }
 
     public function profile() {

@@ -244,7 +244,7 @@ a:focus, a:hover {
 }
 
 .title {
-  padding-bottom: 50px;
+  padding-bottom: 30px;
   overflow: hidden;
 }
 
@@ -1157,6 +1157,7 @@ a:focus, a:hover {
   border: none;
   color: #fff;
   outline: none;
+  margin-bottom: 10px;
 }
 
 .portfolio-filter button.active {
@@ -1266,7 +1267,7 @@ a:focus, a:hover {
 ==================================================================*/
 .service-2 .service-item {
   border: 1px solid #eee;
-  padding: 50px 20px;
+  padding: 20px;
   transition: all 0.3s ease 0s;
 }
 

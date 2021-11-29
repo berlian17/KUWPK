@@ -56,17 +56,22 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
-                                Layanan
+                                Unit Usaha
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('public.simpanan') }}">Simpanan</a>
-                                <a class="dropdown-item" href="{{ route('public.pinjaman') }}">Pinjaman</a>
+                                <a class="dropdown-item" href="">Minimarket</a>
+                                <a class="dropdown-item" href="">Simpanan Pinjam</a>
+                                <a class="dropdown-item" href="">Distributor Pupuk Ritel</a>
+                                <a class="dropdown-item" href="">Supplier Barang & Jasa</a>
+                                <a class="dropdown-item" href="">Ekspedisi</a>
+                                <a class="dropdown-item" href="">Kontraktor Sipil & Struktur</a>
+                                <a class="dropdown-item" href="">Event Organizer & Catering</a>
                             </div>
                         </li>
                         <li class="nav-item active dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
-                                Produk
+                                Toko
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('public.produkpria') }}">Pria</a>
@@ -215,7 +220,7 @@
                                 </div>
                             </div>
                             <div class="row mt-2 mb-2">
-                                <div class="col-md-8">
+                                <div class="col-md-8 text-center">
                                     <p>No. invoice</p>
                                     <h3>xxx/xxx/xxxxxxxx</h3>
                                 </div>
@@ -229,7 +234,7 @@
                                     <p>Status: <b>Selesai</b></p>
                                 </div>
                                 <div class="boxright1">
-                                    <a class="btn btn-success mt-2" href="{{ route('public.transaksidetailpayment') }}" role="button">Lihat detail</a>
+                                    <a class="btn btn-success mt-2" href="{{ route('public.transaksidetail') }}" role="button">Lihat detail</a>
                                 </div>
                             </div>
                         </div>
@@ -244,7 +249,7 @@
                                 </div>
                             </div>
                             <div class="row mt-2 mb-2">
-                                <div class="col-md-8">
+                                <div class="col-md-8 text-center">
                                     <p>No. invoice</p>
                                     <h3>xxx/xxx/xxxxxxxx</h3>
                                 </div>
@@ -258,7 +263,7 @@
                                     <p>Status: <b>Selesai</b></p>
                                 </div>
                                 <div class="boxright1">
-                                    <a class="btn btn-success mt-2" href="{{ route('public.transaksidetailpayment') }}" role="button">Lihat detail</a>
+                                    <a class="btn btn-success mt-2" href="{{ route('public.transaksidetail') }}" role="button">Lihat detail</a>
                                 </div>
                             </div>
                         </div>
@@ -273,7 +278,7 @@
                                 </div>
                             </div>
                             <div class="row mt-2 mb-2">
-                                <div class="col-md-8">
+                                <div class="col-md-8 text-center">
                                     <p>No. invoice</p>
                                     <h3>xxx/xxx/xxxxxxxx</h3>
                                 </div>
@@ -287,7 +292,7 @@
                                     <p>Status: <b>Selesai</b></p>
                                 </div>
                                 <div class="boxright1">
-                                    <a class="btn btn-success mt-2" href="{{ route('public.transaksidetailpayment') }}" role="button">Lihat detail</a>
+                                    <a class="btn btn-success mt-2" href="{{ route('public.transaksidetail') }}" role="button">Lihat detail</a>
                                 </div>
                             </div>
                         </div>
